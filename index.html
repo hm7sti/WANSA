@@ -280,6 +280,17 @@ svg.ic{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-wid
 .lgi{display:flex;flex-direction:column;min-width:0;line-height:1.25}.lgc .lgi b{display:block}
 .lhero{height:176px}.ld{top:10px}.ld.b{top:30px}.ld.c{top:6px}
 
+/* V10 ludo dice + pawns */
+.lgcell{display:flex;align-items:center;gap:6px;flex:1;min-width:0;justify-content:flex-start}.lgcell.r{flex-direction:row-reverse}
+.lgrow>.lgcell{justify-content:flex-start}.lgcell.r{justify-content:flex-start}
+.lgdw{width:58px;height:58px;perspective:260px;flex:none;display:grid;place-items:center;visibility:hidden}.lgdw.act{visibility:visible}.lgdw.can{cursor:pointer;animation:dp 1s infinite alternate;filter:drop-shadow(0 0 10px #35ffa0)}
+.dh{width:50px;height:50px;transform-style:preserve-3d}.dh.toss{animation:toss .9s cubic-bezier(.3,.6,.4,1)}@keyframes toss{0%{transform:translateY(0) scale(1)}30%{transform:translateY(-22px) scale(1.25)}60%{transform:translateY(0) scale(.95)}78%{transform:translateY(-6px)}100%{transform:none}}
+.cube{position:relative;width:50px;height:50px;transform-style:preserve-3d}.cf{position:absolute;inset:0;backface-visibility:hidden;display:grid;place-items:center}.cf svg{width:50px;height:50px;display:block}
+.tkb.hop{animation:hopk .135s ease-out}@keyframes hopk{50%{transform:translateY(-5px) scale(1.12)}}
+.tk.ret .tkb{animation:retk .6s ease-out}@keyframes retk{0%{opacity:.2;transform:scale(1.6)}100%{opacity:1;transform:none}}
+.tk{transition:transform .5s cubic-bezier(.3,.8,.3,1)}
+.nav .ltab{width:28px;height:28px;border-radius:8px;display:block;margin:0 auto;object-fit:cover}.nav .on .ltab{box-shadow:0 0 0 2px var(--g1,#35ffa0)}
+
 </style></head><body><div id="app"><div id="scr"></div><div id="mo"></div><div class="toast" id="tt"></div></div><script>const LOGO='logo-v8.png';
 /* ---------- icons ---------- */
 const IC={dice:'<rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 9h.01M15 9h.01M12 12h.01M9 15h.01M15 15h.01" stroke-width="2.6"/>',refresh:'<path d="M20 11a8 8 0 0 0-14-4L4 9M4 4v5h5M4 13a8 8 0 0 0 14 4l2-2M20 20v-5h-5"/>',menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',search:'<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4-4"/>',camera:'<path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',more:'<circle cx="12" cy="5" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="12" cy="19" r="1.5" fill="currentColor"/>',back:'<path d="M19 12H5m6-6-6 6 6 6"/>',chev:'<path d="m9 5 7 7-7 7"/>',video:'<rect x="3" y="6" width="12" height="12" rx="2.5"/><path d="m15 10.5 6-3.5v10l-6-3.5"/>',phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/>',plus:'<path d="M12 5v14M5 12h14"/>',mic:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',micoff:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M4 4l16 16"/>',smile:'<circle cx="12" cy="12" r="9"/><path d="M8.5 14a4.5 4.5 0 0 0 7 0"/><circle cx="9" cy="10" r=".9" fill="currentColor"/><circle cx="15" cy="10" r=".9" fill="currentColor"/>',clip:'<path d="m20 11-8.5 8.5a5 5 0 0 1-7-7L13 4a3.3 3.3 0 0 1 4.7 4.7L9.5 17a1.7 1.7 0 0 1-2.4-2.4L14.5 7"/>',send:'<path d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/>',heart:'<path d="M12 20.5C5 16 3 12.5 3 9.5A4.5 4.5 0 0 1 12 7.5a4.5 4.5 0 0 1 9 2c0 3-2 6.5-9 11z"/>',share:'<path d="M14 4l7 6-7 6v-4c-6 0-9 2-11 6 0-6 3-10 11-10z"/>',eye:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',chat:'<path d="M20 12a8 8 0 0 1-11.5 7.2L4 20l1-4A8 8 0 1 1 20 12z"/>',users:'<circle cx="9" cy="8" r="3.2"/><path d="M3 19c0-3.5 2.7-5.5 6-5.5s6 2 6 5.5"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.5 0 4 1.7 4 4.5"/>',live:'<circle cx="12" cy="12" r="2" fill="currentColor"/><path d="M8 8a5.7 5.7 0 0 0 0 8M16 8a5.7 5.7 0 0 1 0 8M5 5a10 10 0 0 0 0 14M19 5a10 10 0 0 1 0 14"/>',close:'<path d="M6 6l12 12M18 6 6 18"/>',gear:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>',bookmark:'<path d="M6 3h12v18l-6-4-6 4z"/>',devices:'<rect x="3" y="5" width="18" height="11" rx="2"/><path d="M8 20h8M12 16v4"/>',star:'<path d="m12 3 2.8 5.8 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.3l1.1-6.2L3 9.7l6.2-.9z"/>',wallet:'<rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M16 12.5h2M3 10h18"/>',globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',lock:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',bell:'<path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4zM10 21h4"/>',help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.6 2.6 0 0 1 5 1c0 1.8-2.5 2-2.5 3.5M12 17v.2"/>',info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.2"/>',logout:'<path d="M10 4H5v16h5M16 8l4 4-4 4M20 12H9"/>',userplus:'<circle cx="10" cy="8" r="4"/><path d="M3 21c0-4 3.2-6.5 7-6.5M19 8v6M16 11h6"/>',image:'<rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="9" cy="10" r="1.6"/><path d="m4 18 5-5 4 4 3-3 4 4"/>',pin:'<path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',play:'<path d="M8 5v14l11-7z"/>',pause:'<path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/>',vol:'<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/>',checks:'<path d="m2 13 4 4 8-9M10 15l2 2 9-10"/>',palette:'<path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 1.5-2.2-.5-1.3.2-2.3 1.6-2.3H17a4 4 0 0 0 4-4C21 6.8 17 3 12 3z"/><circle cx="8" cy="11" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16" cy="11" r="1"/>',db:'<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/>',phin:'<path d="M3 4l6 6M9 4v6H3"/><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6"/>',plane:'<path d="M3 11l18-8-8 18-2-8z"/>',drop:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',file:'<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/>',music:'<path d="M9 18V6l11-2v12"/><circle cx="7" cy="18" r="2.5"/><circle cx="18" cy="16" r="2.5"/>',trash:'<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v6M14 11v6"/>',copy:'<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',chip:'<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>'};
@@ -497,7 +508,8 @@ const CMT=[['ali','🔥🔥'],['sara','أجواء خيالية 😍'],['omar','�
 const POOL=['يا سلام 😍','الله الله','أجمل ليلة','🔥🔥🔥','تحية من الرياض','الصوت ممتاز','👏👏','ما شاء الله'];
 const CALLS0=[{c:'ahmed',d:['3 دقائق · مكالمة صوتية','3 min · voice call'],tm:'9:40 PM',v:0},{c:'sara',d:['12 دقيقة · فيديو','12 min · video'],tm:'9:20 PM',v:1},{c:'omar',d:['5 ثواني · مكالمة صوتية','5 sec · voice call'],tm:'8:15 PM',v:0},{c:'family',d:['40 دقيقة · فيديو','40 min · video'],tm:'7:10 PM',v:1},{c:'noor',d:['لم يرد · مكالمة صوتية','No answer · voice call'],tm:'6:30 PM',v:0,x:1},{c:'aisha',d:['8 دقائق · فيديو','8 min · video'],tm:'5:45 PM',v:1}];
 /* ---------- components ---------- */
-const nav=a=>`<nav class="nav">${[['chats','chat',T('الدردشات','Chats'),CH.reduce((a,c)=>a+(c.un||0),0)],['camera','camera',T('الكاميرا','Camera')],['status','',T('الحالة','Status')],['ludo','dice',T('لودو','Ludo')],['calls','phone',T('المكالمات','Calls')]].map(([id,ic,l,bd])=>id==='status'?`<button class="mid ${a===id?'on':''}" data-go="status"><span class="ring"><i></i></span><span style="height:23px"></span>${l}</button>`:`<button class="${a===id?'on':''} ${id==='ludo'?'lv':''}" data-go="${id}">${ico(ic)}${l}${bd?`<span class="bd">${bd}</span>`:''}</button>`).join('')}</nav>`;
+const LUDOIMG='ludo-tab-v10.png';
+const nav=a=>`<nav class="nav">${[['chats','chat',T('الدردشات','Chats'),CH.reduce((a,c)=>a+(c.un||0),0)],['camera','camera',T('الكاميرا','Camera')],['status','',T('الحالة','Status')],['ludo','dice',T('لودو','Ludo')],['calls','phone',T('المكالمات','Calls')]].map(([id,ic,l,bd])=>id==='status'?`<button class="mid ${a===id?'on':''}" data-go="status"><span class="ring"><i></i></span><span style="height:23px"></span>${l}</button>`:`<button class="${a===id?'on':''} ${id==='ludo'?'lv':''}" data-go="${id}">${id==='ludo'?`<img class="ltab" src="${LUDOIMG}" alt="">`:ico(ic)}${l}${bd?`<span class="bd">${bd}</span>`:''}</button>`).join('')}</nav>`;
 const hdr=(title,{back=1,r=''}={})=>`<div class="hdr">${back?`<button class="ib" data-go="back" aria-label="back">${ico('back')}</button>`:'<span class="ib"></span>'}<h1>${title}</h1><span style="display:flex">${r||'<span class="ib"></span>'}</span></div>`;
 const ibtn=(ic,go,extra='')=>`<button class="ib" ${go.startsWith('act:')?`data-act="${go.slice(4)}"`:`data-go="${go}"`} ${extra}>${ico(ic)}</button>`;
 const seg=(items,cur,act,fill)=>`<div class="seg ${fill?'fill':''}">${items.map(([k,l])=>`<button class="${k===cur?'on':''}" data-act="${act}" data-v="${k}">${l}</button>`).join('')}</div>`;
@@ -909,7 +921,7 @@ const LCAT={dice:LDICE,tok:LTOK,bub:LBUB,theme:LTHEME};
 /* wallet + equipment */
 const gems=()=>{try{const v=localStorage.getItem('wansaGems');return v===null?10:+v||0}catch(e){return 25}};
 const setGems=n=>{try{localStorage.setItem('wansaGems',Math.max(0,n|0))}catch(e){}};
-const lEq=()=>{let e={};try{e=JSON.parse(localStorage.getItem('wansaLudoEq'))||{}}catch(x){}return Object.assign({dice:'classic',tok:'ball',bub:'plain',theme:'classic'},e)};
+const lEq=()=>{let e={};try{e=JSON.parse(localStorage.getItem('wansaLudoEq'))||{}}catch(x){}return Object.assign({dice:'classic',tok:'pawn',bub:'plain',theme:'classic'},e)};
 const lSetEq=(c,id)=>{const e=lEq();e[c]=id;try{localStorage.setItem('wansaLudoEq',JSON.stringify(e))}catch(x){}};
 const lItem=(c,id)=>(LCAT[c]||[]).find(x=>x.id===id)||(LCAT[c]||[])[0];
 const lOwned=(c,it)=>!!it.free||isOwned('lu:'+c+':'+it.id);
@@ -943,14 +955,35 @@ const BOTN=['سلمى','خالد','نور','عمر','ريم','يوسف','هدى'
 function lBots(){const nm=BOTN.slice().sort(()=>Math.random()-.5);return [1,2,3].map(i=>({name:nm[i],type:'bot',cfg:avRand()}))}
 
 /* ===== late: Ludo — rendering, controller, online (PeerJS) ===== */
-const LG={mode:'local',G:null,my:0,stake:100,tm:0,fast:0,emo:{},room:'',paid:0,settled:0,muted:0,sig:'',lastRoll:'',busy:0};
+const LG={face:{},hop:{},rollKey:0,hopKey:0,settleAt:0,busyUntil:0,mode:'local',G:null,my:0,stake:100,tm:0,fast:0,emo:{},room:'',paid:0,settled:0,muted:0,sig:'',lastRoll:'',busy:0};
 let NET=null,_dg=0;
 const PIPS={1:[[50,50]],2:[[30,30],[70,70]],3:[[28,28],[50,50],[72,72]],4:[[30,30],[70,30],[30,70],[70,70]],5:[[28,28],[72,28],[50,50],[28,72],[72,72]],6:[[30,24],[70,24],[30,50],[70,50],[30,76],[70,76]]};
 function lDie(v,id,s=64){const k=lItem('dice',id),g='dg'+(_dg++);
  return `<svg viewBox="0 0 100 100" width="${s}" height="${s}"><defs><linearGradient id="${g}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${k.bg[0]}"/><stop offset="1" stop-color="${k.bg[1]}"/></linearGradient></defs><rect x="5" y="5" width="90" height="90" rx="20" fill="url(#${g})" stroke="${k.ed}" stroke-width="4"/><rect x="11" y="10" width="78" height="30" rx="14" fill="#fff" opacity=".18"/>${k.dec?`<text x="80" y="25" font-size="17" text-anchor="middle" opacity=".6">${k.dec}</text><text x="20" y="92" font-size="17" text-anchor="middle" opacity=".6">${k.dec}</text>`:''}${(PIPS[v]||PIPS[1]).map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="8.5" fill="${k.pip}"/>`).join('')}</svg>`}
-function lTokG(shape,seat){const k=lItem('tok',shape);return `<ellipse cy="3.9" rx="4" ry="1.3" fill="rgba(0,0,0,.32)"/><g fill="${LSEAT[seat]}" stroke="${LSEATD[seat]}" stroke-width=".8" stroke-linejoin="round">${k.d}</g><ellipse cx="-1.1" cy="-1.6" rx="1.1" ry=".8" fill="#fff" opacity=".55"/>`}
+function lTokG(shape,s){return `<ellipse cy="4.3" rx="4.6" ry="1.5" fill="rgba(0,0,0,.38)"/><path d="M-4 4.1Q-4 2.6 -2.5 2.4L-1.7 -.6Q-1.5-1.4-.6-1.5H.6Q1.5-1.4 1.7-.6L2.5 2.4Q4 2.6 4 4.1Z" fill="url(#pb${s})" stroke="${LSEATD[s]}" stroke-width=".5"/><ellipse cy="3.6" rx="4" ry="1" fill="${LSEATD[s]}" opacity=".55"/><circle cy="-3.1" r="2.9" fill="url(#ph${s})" stroke="${LSEATD[s]}" stroke-width=".5"/><ellipse cx="-1" cy="-4.2" rx="1.1" ry=".7" fill="#fff" opacity=".8" transform="rotate(-25 -1 -4.2)"/>`}
+function lDefs(){return '<defs>'+[0,1,2,3].map(s=>`<linearGradient id="pb${s}" x1="0" x2="1"><stop offset="0" stop-color="${LSEAT[s]}"/><stop offset=".45" stop-color="#fff" stop-opacity=".55"/><stop offset=".55" stop-color="${LSEAT[s]}"/><stop offset="1" stop-color="${LSEATD[s]}"/></linearGradient><radialGradient id="ph${s}" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset=".25" stop-color="${LSEAT[s]}"/><stop offset="1" stop-color="${LSEATD[s]}"/></radialGradient>`).join('')+'</defs>'}
+const LFACE={1:[0,0],6:[0,180],3:[0,-90],4:[0,90],2:[-90,0],5:[90,0]};
+function lCubeHTML(skin){const f=(v,tr)=>`<div class="cf" style="transform:${tr}">${lDie(v,skin,50)}</div>`;
+ return `<div class="cube">${f(1,'translateZ(25px)')}${f(6,'rotateY(180deg) translateZ(25px)')}${f(3,'rotateY(90deg) translateZ(25px)')}${f(4,'rotateY(-90deg) translateZ(25px)')}${f(2,'rotateX(90deg) translateZ(25px)')}${f(5,'rotateX(-90deg) translateZ(25px)')}</div>`}
+const lTf=(v,sx,sy)=>{const q=LFACE[v]||LFACE[1];return `rotateX(${-16+sx}deg) rotateY(${20+sy}deg) rotateX(${q[0]}deg) rotateY(${q[1]}deg)`};
+const lDieEl=s=>{for(let p=0;p<4;p++)if(seatAt(p)===s)return $('#ldie'+p)};
+function lgFace(s,v){const el=lDieEl(s),c=el&&el.querySelector('.cube');if(!c)return;c.style.transition='none';c.style.transform=lTf(v,0,0);LG.face[s]=v}
+function lgRoll3D(s,v){const el=lDieEl(s),c=el&&el.querySelector('.cube'),dh=el&&el.querySelector('.dh');if(!c)return;
+ c.style.transition='none';c.style.transform=lTf(v,-720-90*(Math.random()*4|0),-540-90*(Math.random()*4|0));void c.offsetWidth;
+ c.style.transition=`transform ${LG.fast?10:900}ms cubic-bezier(.15,.7,.2,1)`;c.style.transform=lTf(v,0,0);
+ dh.classList.remove('toss');void dh.offsetWidth;dh.classList.add('toss');LG.face[s]=v;LG.settleAt=Date.now()+(LG.fast?0:950)}
+function lgDice(){const G=LG.G;for(let p=0;p<4;p++){const el=$('#ldie'+p),s=seatAt(p);if(!el)continue;const sk=G.players[s].dice||'classic';
+  if(el.dataset.sk!==sk){el.dataset.sk=sk;el.innerHTML=`<div class="dh">${lCubeHTML(sk)}</div>`;lgFace(s,LG.face[s]||1)}
+  const act=G.turn===s&&G.phase!=='over'&&G.phase!=='lobby';el.classList.toggle('act',act);el.classList.toggle('can',act&&s===LG.my&&G.phase==='roll')}
+ if(G.roll&&G.rn&&LG.rollKey!==G.rn){LG.rollKey=G.rn;lgRoll3D(G.turn,G.roll)}}
+function lgHop(){const G=LG.G,l=G.last;LG.hopKey=G.mc;if(!l||LG.fast)return;const idx=l.seat*4+l.pi;const steps=[];
+ if(l.from<0)steps.push(0);else for(let p=l.from+1;p<=l.to;p++)steps.push(p);if(!steps.length)return;
+ const el=$('#tk'+l.seat+l.pi);if(!el)return;LG.hop[idx]=1;(l.cap||[]).forEach(([o,q])=>LG.hop[o*4+q]=1);
+ const T=135;let i=0;const run=()=>{if(i>=steps.length){delete LG.hop[idx];(l.cap||[]).forEach(([o,q])=>{delete LG.hop[o*4+q];const e=$('#tk'+o+q);if(e){e.classList.add('ret');setTimeout(()=>e.classList.remove('ret'),650)}});el.style.transition='';lgDraw();return}
+  const c=lCell(l.seat,steps[i],l.pi);el.style.transition=`transform ${T}ms linear`;el.style.transform=`translate(${c[0]}px,${c[1]}px) scale(1)`;el.style.zIndex=5;const b=el.querySelector('.tkb');b.classList.remove('hop');void b.getBoundingClientRect();b.classList.add('hop');i++;setTimeout(run,T)};
+ LG.busyUntil=Date.now()+steps.length*T+200;run()}
 function lStar(cx,cy,r,f){let p='';for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,rr=i%2?r*.45:r;p+=(i?'L':'M')+(cx+Math.cos(a)*rr).toFixed(2)+' '+(cy+Math.sin(a)*rr).toFixed(2)}return `<path d="${p}Z" fill="${f}"/>`}
-function lBoardInner(th,pl){const c=th.cell,ln=th.line;let h='';
+function lBoardInner(th,pl){const c=th.cell,ln=th.line;let h=lDefs();
  for(let s=0;s<4;s++){const o=LYARD[s];const px=o[0]*10,py=o[1]*10;h+=`<rect x="${px}" y="${py}" width="60" height="60" rx="7" fill="${LSEAT[s]}"/>`;
   if(pl&&pl[s]){h+=`<clipPath id="yc${s}"><rect x="${px}" y="${py}" width="60" height="60" rx="7"/></clipPath><g clip-path="url(#yc${s})" opacity=".55"><g transform="rotate(${-(3-LG.my)*90} ${px+30} ${py+30})">${s===LG.my&&MYAV?`<image href="${MYAV}" x="${px}" y="${py}" width="60" height="60" preserveAspectRatio="xMidYMid slice"/>`:avSvg(pl[s].cfg).replace('<svg viewBox="0 0 100 100">',`<svg x="${px}" y="${py}" width="60" height="60" viewBox="0 0 100 100">`)}</g></g><rect x="${px+1}" y="${py+1}" width="58" height="58" rx="6.5" fill="none" stroke="${LSEAT[s]}" stroke-width="3"/>`}
   else h+=`<rect x="${px+8}" y="${py+8}" width="44" height="44" rx="9" fill="${c}" opacity=".92"/>`;
@@ -972,7 +1005,7 @@ function lPos(G){const m={},res=[];for(let s=0;s<4;s++)for(let i=0;i<4;i++){cons
 const seatAt=pos=>(((pos-(3-LG.my))%4)+4)%4;
 function lChip(s){const G=LG.G,p=G.players[s],act=G.turn===s&&G.phase!=='over'&&G.phase!=='lobby';const e=LG.emo[s];const b=lItem('bub',p.bub||'plain');
  return `<div class="lgc ${act?'act':''}" style="--sc:${LSEAT[s]}"><span class="lgav">${avSvg(p.cfg)}${p.type==='remote'||s===LG.my&&NET?`<i class="lgmic ${NET&&NET.voice&&!(s===LG.my&&LG.muted)?'':'off'}">${NET&&NET.voice&&!(s===LG.my&&LG.muted)?'🎙':'🔇'}</i>`:''}</span><span class="lgi"><b class="l">${esc(p.name)}${s===LG.my?` <small>(${T('أنت','you')})</small>`:''}</b><small class="pcn">${G.pieces[s].filter(x=>x===56).length}/4 🏁</small></span>${e?`<span class="lgem" style="background:${b.bg};color:${b.fg};${b.bd?'border:1.5px solid '+b.bd:''}">${e}</span>`:''}</div>`}
-function lgTokens(){const G=LG.G;let h='';for(let s=0;s<4;s++)for(let i=0;i<4;i++)h+=`<g class="tk" id="tk${s}${i}" data-act="lgmove" data-s="${s}" data-pi="${i}"><circle class="hl" r="6"/><g class="tkb">${lTokG(G.players[s].tok||'ball',s)}</g></g>`;return h}
+function lgTokens(){const G=LG.G;let h='';for(let s=0;s<4;s++)for(let i=0;i<4;i++)h+=`<g class="tk" id="tk${s}${i}" data-act="lgmove" data-s="${s}" data-pi="${i}"><circle class="hl" r="6"/><g class="tkb"><g transform="rotate(${-(3-LG.my)*90}) scale(1.3) translate(0,.8)">${lTokG(1,s)}</g></g></g>`;return h}
 function lgMount(){const G=LG.G;if(!G||!$('#lgsvg'))return;const th=lItem('theme',lEq().theme);
  $('#lgb').setAttribute('style',lBgStyle(th));$('#lgd').innerHTML=lDeco(th);
  $('#lgsvg').innerHTML=lBoardInner(th,G.players)+`<g id="lgtk">${lgTokens()}</g>`;$('#lgsvg').style.transform=`rotate(${(3-LG.my)*90}deg)`;
@@ -985,11 +1018,9 @@ function lgMsg(){const G=LG.G,p=G.players[G.turn];if(G.phase==='over')return G.w
 function lgDraw(){const G=LG.G;if(!G||!$('#lgsvg'))return;
  const s2=G.players.map(p=>JSON.stringify(p.cfg)).join('|');if(LG.sig2!==s2&&LG.sig2!==undefined){LG.sig2=s2;const th=lItem('theme',lEq().theme);$('#lgsvg').innerHTML=lBoardInner(th,G.players)+`<g id="lgtk">${lgTokens()}</g>`}LG.sig2=s2;
  if(LG.sig!==G.players.map(p=>p.tok).join()){$('#lgtk').innerHTML=lgTokens();LG.sig=G.players.map(p=>p.tok).join()}
- const pos=lPos(G),mine=G.turn===LG.my&&G.phase==='move',mv=mine?gMoves(G):[];
- for(let s=0;s<4;s++)for(let i=0;i<4;i++){const el=$('#tk'+s+i);if(!el)continue;const q=pos[s*4+i];el.style.transform=`translate(${q[0]}px,${q[1]}px) scale(${q[2]})`;el.classList.toggle('mv',mine&&s===LG.my&&mv.includes(i));el.style.zIndex=G.pieces[s][i]>=0?2:1}
- [[0,'#lgc0'],[1,'#lgc1'],[3,'#lgc3'],[2,'#lgc2']].forEach(([pos2,sel])=>{const e=$(sel);if(e)e.innerHTML=lChip(seatAt(pos2))});
- const sk=G.players[G.turn].dice||'classic',rk=G.turn+':'+G.ver+':'+G.roll;
- const d=$('#lgdie');if(d){d.innerHTML=lDie(G.roll||1,sk,76);d.classList.toggle('can',G.turn===LG.my&&G.phase==='roll');if(G.roll&&LG.lastRoll!==G.turn+':'+G.rolled){LG.lastRoll=G.turn+':'+G.rolled;d.classList.remove('shake');void d.offsetWidth;d.classList.add('shake')}}
+ const pos=lPos(G),settled=Date.now()>=LG.settleAt,mine=G.turn===LG.my&&G.phase==='move'&&settled,mv=mine?gMoves(G):[];if(G.phase==='move'&&!settled&&!LG.stm){LG.stm=setTimeout(()=>{LG.stm=0;lgDraw()},LG.settleAt-Date.now()+30)}
+ for(let s=0;s<4;s++)for(let i=0;i<4;i++){const el=$('#tk'+s+i);if(!el)continue;if(LG.hop[s*4+i])continue;const q=pos[s*4+i];el.style.transform=`translate(${q[0]}px,${q[1]}px) scale(${q[2]})`;el.classList.toggle('mv',mine&&s===LG.my&&mv.includes(i));el.style.zIndex=G.pieces[s][i]>=0?2:1}
+ [[0,'#lgc0'],[1,'#lgc1'],[3,'#lgc3'],[2,'#lgc2']].forEach(([pos2,sel],k)=>{const e=$(sel);if(!e)return;const h=lChip(seatAt(pos2));if(e.__h!==h){e.__h=h;e.innerHTML=h}});[0,1,2,3].forEach(p=>{const c=$('#lgcell'+p);if(c)c.dataset.seat=seatAt(p)});lgDice();if(G.mc&&LG.hopKey!==G.mc)lgHop();
  const m=$('#lgmsg');if(m)m.textContent=lgMsg();
  const pot=$('#lgpot');if(pot)pot.textContent=G.stake*4;
  lgOverlay()}
@@ -1004,16 +1035,16 @@ function lgSettle(){const G=LG.G;if(G.phase==='over'&&!LG.settled){LG.settled=1;
 function lgBroadcast(){if(!NET||LG.mode!=='host')return;const m={t:'st',G:LG.G};Object.values(NET.conns).forEach(c=>{try{c.send(m)}catch(e){}})}
 function lgSync(){const G=LG.G;G.ver++;lgSettle();lgDraw();lgBroadcast();lgAnim();lgDrive()}
 function lgAnim(){const G=LG.G,l=G.last;if(!l||LG.animVer===G.ver||l.from<0)return;LG.animVer=G.ver}
-function hRoll(seat){const G=LG.G;if(!G||G.phase!=='roll'||G.turn!==seat)return;const v=1+Math.floor(Math.random()*6);G.roll=v;G.rolled=Date.now();G.sixes=v===6?G.sixes+1:0;
+function hRoll(seat){const G=LG.G;if(!G||G.phase!=='roll'||G.turn!==seat)return;const v=1+Math.floor(Math.random()*6);G.roll=v;G.rolled=Date.now();G.rn=(G.rn||0)+1;G.sixes=v===6?G.sixes+1:0;
  if(G.sixes>=3){G.phase='wait';lgSync();setTimeout(()=>{if(LG.G===G&&G.phase==='wait'){gNext(G);lgSync()}},LG.fast?5:1200);return}
  if(!gMoves(G).length){G.phase='wait';lgSync();setTimeout(()=>{if(LG.G===G&&G.phase==='wait'){gNext(G);lgSync()}},LG.fast?5:1000)}else{G.phase='move';lgSync()}}
-function hMove(seat,pi){const G=LG.G;if(!G||G.phase!=='move'||G.turn!==seat||!gMoves(G).includes(pi))return;const r=gApply(G,pi);
+function hMove(seat,pi){const G=LG.G;if(!G||G.phase!=='move'||G.turn!==seat||!gMoves(G).includes(pi))return;const r=gApply(G,pi);G.mc=(G.mc||0)+1;
  if(r.cap&&G.players[seat].type==='bot'&&Math.random()<.5)lgEmo(seat,['😎','😂','🔥'][Math.random()*3|0],1);
  lgSync()}
 function lgDrive(){clearTimeout(LG.tm);if(LG.mode==='guest')return;const G=LG.G;if(!G||G.phase==='lobby'||G.phase==='over')return;
- const bot=G.players[G.turn].type==='bot',ver=G.ver,f=LG.fast;
- if(G.phase==='roll'&&bot)LG.tm=setTimeout(()=>{if(LG.G===G&&G.ver===ver)hRoll(G.turn)},f?5:950);
- else if(G.phase==='move'){const mv=gMoves(G);if(bot||mv.length===1)LG.tm=setTimeout(()=>{if(LG.G===G&&G.ver===ver&&G.phase==='move')hMove(G.turn,bot?botPick(G,mv):mv[0])},f?5:(bot?800:650))}}
+ const bot=G.players[G.turn].type==='bot',ver=G.ver,f=LG.fast,ex=f?0:Math.max(0,LG.busyUntil-Date.now(),LG.settleAt-Date.now());
+ if(G.phase==='roll'&&bot)LG.tm=setTimeout(()=>{if(LG.G===G&&G.ver===ver)hRoll(G.turn)},f?5:850+ex);
+ else if(G.phase==='move'){const mv=gMoves(G);if(bot||mv.length===1)LG.tm=setTimeout(()=>{if(LG.G===G&&G.ver===ver&&G.phase==='move')hMove(G.turn,bot?botPick(G,mv):mv[0])},f?5:((bot?750:1000)+ex))}}
 function lgEmo(seat,e,local){LG.emo[seat]=e;lgDraw();clearTimeout(LG['et'+seat]);LG['et'+seat]=setTimeout(()=>{delete LG.emo[seat];lgDraw()},2400);
  if(!local&&NET){if(LG.mode==='host')Object.values(NET.conns).forEach(c=>{try{c.send({t:'emo',seat,e})}catch(x){}})}
  else if(local&&NET&&LG.mode==='host')Object.values(NET.conns).forEach(c=>{try{c.send({t:'emo',seat,e})}catch(x){}})}
@@ -1079,15 +1110,15 @@ function lCard(cat,it){const own=lOwned(cat,it),eq=lEq()[cat]===it.id;let pv='';
  else if(cat==='tok')pv=`<svg viewBox="-12 -9 24 18" width="86" height="64">${[0,1,2,3].map(s=>`<g transform="translate(${-9+s*6},0) scale(.95)">${lTokG(it.id,s)}</g>`).join('')}</svg>`;
  else pv=`<span class="lgem" style="position:static;background:${it.bg};color:${it.fg};${it.bd?'border:1.5px solid '+it.bd:''}">😂 GG</span>`;
  return `<button class="stc ${it.prem?'prem':''} ${eq?'eq':''}" data-act="lgitem" data-k="${cat}" data-v="${it.id}"><span class="stt">${T(it.n[0],it.n[1])}</span><span class="stp">${pv}</span><span class="stb">${eq?'✓ '+T('مُجهّز','Equipped'):own?T('تجهيز','Equip'):'💎 '+it.g}</span></button>`}
-S.ludostore=()=>{const cats=[['dice','🎲',T('النرد','Dice')],['theme','🖼️',T('الموضوع','Theme')],['tok','♟️',T('القطع','Tokens')],['bub','💬',T('فقاعة الدردشة','Bubble')]],f=state.lgFil,c=state.lgCat;
+S.ludostore=()=>{const cats=[['dice','🎲',T('النرد','Dice')],['theme','🖼️',T('الموضوع','Theme')],['bub','💬',T('فقاعة الدردشة','Bubble')]],f=state.lgFil,c=state.lgCat;
  let items=LCAT[c].filter(it=>f==='all'||(f==='prem'&&it.prem)||(f==='rec'&&LREC.includes(it.id))||(f==='own'&&lOwned(c,it)));
  return `<div class="scr ludo">${hdr(T('متجر لودو','Ludo store'),{r:`<span style="display:flex;gap:6px">${wchips()}</span>`})}<div class="body"><div class="stabs">${cats.map(([k,e,n])=>`<button class="${c===k?'on':''}" data-act="lgcat" data-v="${k}"><span>${e}</span>${n}</button>`).join('')}</div>
  <div class="sfil">${[['all',T('الكل','All')],['rec',T('الموصى به','Recommended')],['prem',T('الفاخر','Premium')],['own',T('ما أملكه','Owned')]].map(([k,n])=>`<button class="${f===k?'on':''}" data-act="lgfil" data-v="${k}">${n}</button>`).join('')}</div>
  <div class="sgrid ${c==='theme'?'t3':''}">${items.map(it=>lCard(c,it)).join('')||`<p class="lnote">${T('لا عناصر','No items')}</p>`}</div></div></div>`};
 S.ludogame=()=>{const G=LG.G;if(!G)return S.ludo();
  return `<div class="scr full lgm"><div class="lgtop"><button class="ib glassy" data-act="lgleave" aria-label="leave">${ico('back')}</button><span class="lgpot">🪙 <b id="lgpot"></b></span><button class="ib glassy" data-act="lgmute" id="lgmute" aria-label="mic">${NET?(LG.muted?'🔇':'🎙️'):'🎲'}</button></div>
- <div class="lgrow"><div id="lgc0"></div><div id="lgc1"></div></div><div class="lgb" id="lgb"><div class="lgd" id="lgd"></div><svg id="lgsvg" viewBox="0 0 150 150"></svg></div><div class="lgrow"><div id="lgc3"></div><div id="lgc2"></div></div>
- <div class="lgdock"><div id="lgmsg" class="lgmsg"></div><button class="lgdie" id="lgdie" data-act="lgroll" aria-label="roll"></button><div class="emos">${['😂','😍','🔥','👏','😡','🥱','GG'].map(e=>`<button data-act="lgemo" data-v="${e}">${e}</button>`).join('')}</div></div><div id="lgov"></div></div>`};
+ <div class="lgrow"><div class="lgcell" id="lgcell0"><div id="lgc0"></div><div class="lgdw" id="ldie0" data-act="lgroll" data-s="A"></div></div><div class="lgcell r" id="lgcell1"><div id="lgc1"></div><div class="lgdw" id="ldie1" data-act="lgroll"></div></div></div><div class="lgb" id="lgb"><div class="lgd" id="lgd"></div><svg id="lgsvg" viewBox="0 0 150 150"></svg></div><div class="lgrow"><div class="lgcell" id="lgcell3"><div id="lgc3"></div><div class="lgdw" id="ldie3" data-act="lgroll"></div></div><div class="lgcell r" id="lgcell2"><div id="lgc2"></div><div class="lgdw" id="ldie2" data-act="lgroll"></div></div></div>
+ <div class="lgdock"><div id="lgmsg" class="lgmsg"></div><div class="emos">${['😂','😍','🔥','👏','😡','🥱','GG'].map(e=>`<button data-act="lgemo" data-v="${e}">${e}</button>`).join('')}</div></div><div id="lgov"></div></div>`};
 Object.assign(ACT,{
  lgstake(t){state.lgStake=+t.dataset.v;render()},
  lgplay(){lgStartLocal(state.lgStake)},
