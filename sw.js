@@ -1,5 +1,5 @@
-const CACHE='wansa-demo-v7';
-const FILES=['./','./index.html','./sunset.jpg','./logo.png','./icon-192.png','./icon-512.png','./apple-touch-icon.png','./manifest.webmanifest'];
+const CACHE='wansa-demo-v8';
+const FILES=['./','./index.html','./bg-sunset-v8.jpg','./logo-v8.png','./wansa-icon-192.png','./wansa-icon-512.png','./wansa-icon-maskable.png','./wansa-apple-180.png','./manifest.webmanifest'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)));self.skipWaiting()});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
-self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;e.respondWith(fetch(e.request).then(r=>{if(r.ok&&new URL(e.request.url).origin===location.origin){const c=r.clone();caches.open(CACHE).then(x=>x.put(e.request,c))}return r}).catch(()=>caches.match(e.request).then(r=>r||caches.match('./index.html'))))});
+self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;e.respondWith(fetch(e.request,{cache:'no-cache'}).then(r=>{if(r.ok&&new URL(e.request.url).origin===location.origin){const c=r.clone();caches.open(CACHE).then(x=>x.put(e.request,c))}return r}).catch(()=>caches.match(e.request).then(r=>r||caches.match('./index.html'))))});
