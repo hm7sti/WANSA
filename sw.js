@@ -1,4 +1,4 @@
-const CACHE='wansa-demo-v8';
+const CACHE='wansa-demo-v9';
 const FILES=['./','./index.html','./bg-sunset-v8.jpg','./logo-v8.png','./wansa-icon-192.png','./wansa-icon-512.png','./wansa-icon-maskable.png','./wansa-apple-180.png','./manifest.webmanifest'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)));self.skipWaiting()});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==CACHE).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
