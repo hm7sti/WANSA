@@ -291,6 +291,79 @@ svg.ic{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-wid
 .tk{transition:transform .5s cubic-bezier(.3,.8,.3,1)}
 .nav .ltab{width:28px;height:28px;border-radius:8px;display:block;margin:0 auto;object-fit:cover}.nav .on .ltab{box-shadow:0 0 0 2px var(--g1,#35ffa0)}
 
+/* V11 ludo flow */
+.lmodes{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 14px}.lmode{display:flex;flex-direction:column;align-items:center;gap:4px;padding:16px 10px;border-radius:18px;background:linear-gradient(160deg,#134a33,#0b2a1f);border:1px solid var(--line);color:#fff;text-align:center}.lmode span{font-size:34px}.lmode b{font-size:15px}.lmode small{font-size:11px;color:var(--mute);line-height:1.4}
+.lhero.sm{padding:10px 0}.stp{display:flex;align-items:center;justify-content:center;gap:18px;padding:6px 14px}.stp button{width:54px;height:54px;border-radius:50%;font-size:28px;font-weight:800;background:#ffcf3f;color:#2a1c00;border:0}.stp button:disabled{opacity:.35}.stp div{min-width:150px;text-align:center;padding:10px;border-radius:16px;background:#0008}.stp b{display:block;font-size:24px}.stp small{color:var(--mute);font-size:12px}
+.vsbox{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:20px}.vsgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px}.vsp{display:flex;flex-direction:column;align-items:center;gap:6px;opacity:.5;transition:.4s}.vsp.in{opacity:1;animation:pop .35s}.vsp .lgav{width:84px;height:84px;display:grid;place-items:center;background:#0008}.vsp b{font-size:13px}.spn{width:26px;height:26px;border:3px solid #fff4;border-top-color:var(--sc);border-radius:50%;animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.pills{display:flex;gap:12px;justify-content:center}.pills button{min-width:62px;height:40px;border-radius:20px;background:linear-gradient(#ffd84d,#f2b400);border:0;font-size:20px;box-shadow:0 3px 0 #a87800}
+.lgsheet{position:absolute;inset:0;background:#000a;display:flex;align-items:flex-end;z-index:30}.lgsheet .sh{width:100%;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px));background:#0b2a1f;border-radius:22px 22px 0 0;display:flex;flex-direction:column;gap:8px}.lgsheet h3{text-align:center;margin:0 0 4px}
+.lgset{display:flex;align-items:center;gap:12px;padding:12px;border-radius:14px;background:#0008;color:#fff;border:0;font-size:15px}.lgset b{flex:1;text-align:start}.lgset em{font-style:normal;opacity:.6}.tg{width:42px;height:24px;border-radius:12px;background:#555;position:relative}.tg::after{content:'';position:absolute;top:3px;inset-inline-start:3px;width:18px;height:18px;border-radius:50%;background:#fff;transition:.2s}.tg.on{background:#2dbf6a}.tg.on::after{inset-inline-start:21px}
+.qc{display:grid;grid-template-columns:1fr 1fr;gap:8px}.qc button{padding:12px;border-radius:14px;background:#134a33;color:#fff;border:1px solid var(--line);font-size:14px}
+
+/* V12 lobby per mockup */
+.lobby .body{padding-bottom:90px}.lhb{position:relative;margin:4px 14px 12px;height:176px;border-radius:22px;overflow:hidden;background:#0c2a1f;border:1px solid #d9b45a55;direction:ltr}
+.lhb img{position:absolute;right:0;top:0;height:100%;width:auto}.lhb::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#0a2219 0%,#0a2219dd 34%,#0a221900 66%)}
+.lht{position:absolute;left:16px;top:0;bottom:0;z-index:2;display:flex;flex-direction:column;justify-content:center;max-width:58%;direction:rtl;text-align:right;gap:1px}
+.lht h2{margin:0;font-size:24px;color:#f7e7bd}.lht h3{margin:0;font-size:16px;color:#f7e7bd;font-weight:700}.lht p{margin:4px 0 8px;font-size:11.5px;color:#cfe}
+.gob{align-self:flex-start;display:flex;align-items:center;gap:8px;padding:9px 16px;border-radius:14px;border:0;background:linear-gradient(#f4d58d,#e0b45a);color:#2a1c00;font-weight:800;font-size:14px}.gob i{font-style:normal;font-size:18px}
+.ltags{display:flex;gap:8px;overflow-x:auto;padding:0 14px 10px;scrollbar-width:none;direction:ltr}.ltags::-webkit-scrollbar{display:none}.ltags button{flex:none;display:flex;align-items:center;gap:6px;padding:9px 14px;border-radius:22px;background:#0b2a1fcc;border:1px solid var(--line);color:#e8fff3;font-size:13px}.ltags button.on{border-color:#e0c36a;box-shadow:0 0 10px #e0c36a55}
+.lcards{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 14px;direction:ltr}
+.lc{position:relative;height:104px;border-radius:18px;overflow:hidden;border:1px solid #ffffff18;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 22%,#0b2a1f),#0b2a1f);color:#fff;text-align:left;padding:0;display:block}
+.lc img{position:absolute;right:0;top:0;height:100%;width:56%;object-fit:cover;-webkit-mask-image:linear-gradient(90deg,transparent,#000 38%);mask-image:linear-gradient(90deg,transparent,#000 38%)}
+.lc .lct{position:absolute;left:12px;top:10px;direction:rtl;text-align:left;unicode-bidi:plaintext}.lc b{display:block;font-size:15px}.lc small{display:block;font-size:10.5px;color:#cfe;opacity:.8;line-height:1.5;margin-top:2px}
+.lc .go{position:absolute;left:12px;bottom:9px;width:26px;height:26px;border-radius:50%;background:var(--c);display:grid;place-items:center;font-style:normal;font-size:17px}.lc:disabled{opacity:.6}
+
+/* V13 */
+.ptr{display:none}.tk.mv .ptr{display:block;animation:bob .55s ease-in-out infinite alternate}@keyframes bob{to{transform:translateY(-3px)}}
+.tmr{position:absolute;left:8px;right:8px;bottom:-5px;height:4px;border-radius:3px;background:#0006;overflow:hidden}.tmr u{display:block;height:100%;background:linear-gradient(90deg,#35ffa0,#ffd84d,#ff4d4d);transform-origin:left;animation-name:tm;animation-timing-function:linear;animation-fill-mode:forwards}@keyframes tm{from{transform:scaleX(1)}to{transform:scaleX(0)}}
+.vsgrid.two{grid-template-columns:1fr 1fr}.bigem{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:6px}.bigem button{font-size:26px;padding:6px 0;border-radius:12px;background:#134a33;border:1px solid var(--line)}
+.lvl{display:flex;align-items:center;gap:10px;margin:0 14px 10px;padding:8px 12px;border-radius:16px;background:#0b2a1fcc;border:1px solid var(--line)}.lvl b{font-size:13px;color:#ffd84d;white-space:nowrap}.lvl .bar{flex:1;height:8px;border-radius:5px;background:#0007;overflow:hidden}.lvl .bar u{display:block;height:100%;background:linear-gradient(90deg,#35ffa0,#ffd84d);border-radius:5px}.lvl small{font-size:11px;color:var(--mute)}
+
+/* V14 store preview + profile */
+.lgsheet.pv{position:fixed;z-index:50}.pvbig{display:grid;place-items:center;padding:18px 0;min-height:170px}.pvd{perspective:420px;width:100px;height:100px;display:grid;place-items:center}.pvc{animation:pvs 6s linear infinite;transform:scale(1.7) rotateX(-18deg)}@keyframes pvs{to{transform:scale(1.7) rotateX(-18deg) rotateY(360deg)}}
+.pfh{display:flex;flex-direction:column;align-items:center;padding:14px}.pfa{width:92px;height:92px;border-radius:50%;overflow:hidden;border:3px solid #ffd84d;display:block}.pfa svg{width:100%;height:100%}.pfh h2{margin:8px 0 0}.pfl{color:#ffd84d;font-size:13px}.pfh .lvl{width:100%}
+.pfs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 14px}.pfs div{text-align:center;padding:12px 4px;border-radius:14px;background:#0b2a1fcc;border:1px solid var(--line)}.pfs b{display:block;font-size:20px}.pfs small{color:var(--mute);font-size:11px}
+.ach{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 14px 90px}.ach div{text-align:center;padding:12px 4px;border-radius:14px;background:#0b2a1f88;opacity:.4;filter:grayscale(1)}.ach div.ok{opacity:1;filter:none;border:1px solid #ffd84d88}.ach span{font-size:30px;display:block}.ach small{font-size:10.5px}
+
+/* V15 Jota */
+.nav .ring.jr{background:conic-gradient(#7af0c4,#6a8cff,#c46bff,#7af0c4);box-shadow:0 0 22px rgba(122,140,255,.65)}.nav .ring.jr i{display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#2a5a8f,#0a2219 70%);font-style:normal;font-size:26px;color:#fff;text-shadow:0 0 10px #9fe}
+.jorb{display:inline-grid;place-items:center;border-radius:50%;background:conic-gradient(#7af0c4,#6a8cff,#c46bff,#7af0c4);flex:none;padding:2px}.jorb i{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#2a5a8f,#0a2219 70%);font-style:normal;color:#fff;font-size:.55em}
+.jorb[style*="84px"] i{font-size:38px}.jorb[style*="38px"] i{font-size:18px}.jorb[style*="26px"] i{font-size:12px}
+.jota{display:flex;flex-direction:column}.jt{display:flex;align-items:center;gap:10px;flex:1;margin-inline-start:6px}.jt b{display:block;font-size:16px}.jt small{color:var(--mute);font-size:11px}
+.jmsgs{flex:1;overflow-y:auto;padding:12px 14px;display:flex;flex-direction:column;gap:10px}.jwel{margin:auto;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;padding:20px}.jwel p{color:var(--mute);font-size:13px;line-height:1.7;max-width:280px;margin:0}
+.jb{display:flex;gap:8px;align-items:flex-end;max-width:88%}.jb.me{align-self:flex-end;flex-direction:row-reverse}.jb .jt2{padding:9px 13px;border-radius:18px;font-size:14.5px;line-height:1.6;background:#134a33;border:1px solid var(--line)}.jb.me .jt2{background:linear-gradient(135deg,#1f8f5a,#16724a);border-color:transparent}.jb.bot .jt2{border-end-start-radius:6px}.jb.me .jt2{border-end-end-radius:6px}
+.jdots{display:flex;gap:4px;padding:12px 14px;border-radius:18px;background:#134a33}.jdots i{width:7px;height:7px;border-radius:50%;background:#9fe;animation:jd 1s infinite}.jdots i:nth-child(2){animation-delay:.15s}.jdots i:nth-child(3){animation-delay:.3s}@keyframes jd{50%{transform:translateY(-5px);opacity:.5}}
+.jchips{display:flex;gap:8px;overflow-x:auto;padding:4px 12px;scrollbar-width:none}.jchips::-webkit-scrollbar{display:none}.jchips button{flex:none;padding:8px 14px;border-radius:18px;background:#0b2a1fcc;border:1px solid var(--line);color:inherit;font-size:13px}
+
+.jinp{height:44px;border-radius:14px;padding:0 12px;background:var(--field);border:1px solid var(--line);color:inherit;width:100%}
+.ib.jon{background:#35ffa033;border-radius:50%}.jmic.rec{color:#ff5a5a;animation:pop .8s infinite alternate}
+.jatt{display:flex;gap:8px;overflow-x:auto;padding:6px 12px}.ja{position:relative;flex:none;display:flex;align-items:center;gap:6px;padding:4px 26px 4px 4px;border-radius:12px;background:#0b2a1fcc;border:1px solid var(--line);max-width:170px}.ja img{width:40px;height:40px;border-radius:8px;object-fit:cover}.ja i{font-style:normal;font-size:26px;width:40px;text-align:center}.ja b{font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ja button{position:absolute;top:2px;inset-inline-end:4px;background:none;border:0;color:#fff;font-size:16px}
+.jim{display:block;max-width:180px;max-height:140px;border-radius:12px;margin-bottom:6px}.jf{display:block;font-size:12px;opacity:.85;margin-bottom:4px}
+
+/* V17 chats FAB */
+.fab.x{background:#2a3a35;transform:rotate(90deg)}.fabbg{position:absolute;inset:0;background:#0007;z-index:19}.fabm{position:absolute;right:18px;bottom:166px;z-index:21;display:flex;flex-direction:column;gap:12px;align-items:flex-end}.fabm button{display:flex;align-items:center;gap:10px;background:none;border:0;color:#fff;font-size:14px}.fabm button span{background:#0b2a1fee;padding:8px 14px;border-radius:14px;border:1px solid var(--line)}.fabm button i{width:46px;height:46px;border-radius:50%;background:linear-gradient(#2bd368,#14873f);display:grid;place-items:center}.fabm .ic{width:22px;height:22px;color:#fff}.fab{z-index:22}.fcl{max-height:50vh;overflow-y:auto}
+/* jota bar plain */
+.jbar{border:0;background:transparent;box-shadow:none}.jbar input{background:var(--field);border-radius:22px;padding:0 14px;height:44px}
+.jdr{position:absolute;inset:0;z-index:40;display:flex;justify-content:flex-end;background:#0008}.jdp{width:min(82%,320px);height:100%;background:#0b1f18;display:flex;flex-direction:column;padding:calc(14px + env(safe-area-inset-top,0px)) 14px 14px;gap:8px;animation:jsl .22s ease-out}@keyframes jsl{from{transform:translateX(100%)}}
+.jdp h3{margin:0 4px;font-size:18px}.jdp .jnew{display:flex;align-items:center;gap:10px;padding:12px;border-radius:14px;background:#1f8f5a;color:#fff;border:0;font-size:14.5px;font-weight:700}.jdp .jsr{height:40px;border-radius:20px;padding:0 14px;background:var(--field);border:0;color:inherit}
+.jlist{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:2px}.jlist .jc{display:flex;align-items:center;gap:6px;border-radius:12px}.jlist .jc.on{background:#ffffff14}.jlist .jc button.o{flex:1;text-align:start;background:none;border:0;color:inherit;padding:10px;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.jlist .jc small{display:block;color:var(--mute);font-size:10.5px}.jlist .jc .x{background:none;border:0;color:var(--mute);font-size:18px;padding:6px 10px}
+.jtools{border-top:1px solid var(--line);padding-top:8px;display:flex;flex-direction:column;gap:2px}.jtools button{display:flex;align-items:center;gap:12px;padding:11px 8px;background:none;border:0;color:inherit;font-size:14.5px;border-radius:12px;text-align:start}.jtools button b{flex:1;font-weight:500}.jtools .tg{flex:none}.jtools button:active{background:#ffffff14}
+
+/* V18 jota shortcuts + voices */
+.jchips button.on{border-color:#35ffa0;background:#35ffa022}.jchips.sub{padding-top:0}.jchips.sub button{background:#123a2a}
+.jmode{display:flex;align-items:center;justify-content:space-between;margin:0 14px;padding:6px 12px;border-radius:12px;background:#ffd84d22;color:#ffd84d;font-size:12.5px}.jmode button{background:none;border:0;color:inherit;font-size:18px}
+.jvrow{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:16px;background:var(--field);border:1px solid var(--line);color:inherit;width:100%;text-align:start}.jvrow span:nth-child(2){flex:1}.jvrow b{display:block;font-size:14.5px}.jvrow small{color:var(--mute);font-size:11.5px}.jvrow em{font-style:normal;opacity:.6;font-size:20px}
+.jvo{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:conic-gradient(var(--c,#6a8cff),#0b2a1f,var(--c,#6a8cff));flex:none}
+.jvs{position:absolute;inset:0;z-index:60;background:linear-gradient(#06231a,#031510);display:flex;flex-direction:column;overflow-y:auto;animation:jsl2 .22s ease-out}@keyframes jsl2{from{transform:translateY(40px);opacity:0}}
+.jvh{display:flex;align-items:center;justify-content:space-between;padding:calc(10px + env(safe-area-inset-top,0px)) 8px 6px}.jvh h2{margin:0;font-size:18px}
+.jvt{padding:4px 16px}.jtog{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:16px;background:#0b2a1fcc;border:1px solid var(--line)}.jtog b{display:block;font-size:14px}.jtog small{color:var(--mute);font-size:11.5px}
+.jvg{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:8px 16px}
+.jvc{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;padding:18px 10px 14px;border-radius:22px;background:linear-gradient(160deg,color-mix(in srgb,var(--c) 26%,#0b2a1f),#0b2a1f 70%);border:1.5px solid #ffffff14;text-align:center}.jvc.on{border-color:var(--c);box-shadow:0 0 18px color-mix(in srgb,var(--c) 45%,transparent)}
+.jvc .jvo{width:62px;height:62px;box-shadow:0 0 16px color-mix(in srgb,var(--c) 55%,transparent)}.jvc .jvo i{display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:#0b2a1f;font-style:normal;font-weight:800;font-size:22px;color:var(--c)}
+.jvc b{font-size:15px;margin-top:4px}.jvc small{font-size:11px;color:#cfe;opacity:.75;min-height:28px;line-height:1.4}.jvc em{position:absolute;top:8px;inset-inline-start:10px;font-style:normal;color:var(--c);font-weight:800}
+.jvp{margin-top:4px;width:38px;height:38px;border-radius:50%;border:0;background:var(--c);color:#06231a;font-size:15px;font-weight:800}
+.jvn{font-size:11px;color:var(--mute);line-height:1.7;padding:6px 20px 30px;margin:0}
+
 </style></head><body><div id="app"><div id="scr"></div><div id="mo"></div><div class="toast" id="tt"></div></div><script>const LOGO='logo-v8.png';
 /* ---------- icons ---------- */
 const IC={dice:'<rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 9h.01M15 9h.01M12 12h.01M9 15h.01M15 15h.01" stroke-width="2.6"/>',refresh:'<path d="M20 11a8 8 0 0 0-14-4L4 9M4 4v5h5M4 13a8 8 0 0 0 14 4l2-2M20 20v-5h-5"/>',menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',search:'<circle cx="11" cy="11" r="6.5"/><path d="m20 20-4-4"/>',camera:'<path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/>',more:'<circle cx="12" cy="5" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/><circle cx="12" cy="19" r="1.5" fill="currentColor"/>',back:'<path d="M19 12H5m6-6-6 6 6 6"/>',chev:'<path d="m9 5 7 7-7 7"/>',video:'<rect x="3" y="6" width="12" height="12" rx="2.5"/><path d="m15 10.5 6-3.5v10l-6-3.5"/>',phone:'<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2z"/>',plus:'<path d="M12 5v14M5 12h14"/>',mic:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',micoff:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M4 4l16 16"/>',smile:'<circle cx="12" cy="12" r="9"/><path d="M8.5 14a4.5 4.5 0 0 0 7 0"/><circle cx="9" cy="10" r=".9" fill="currentColor"/><circle cx="15" cy="10" r=".9" fill="currentColor"/>',clip:'<path d="m20 11-8.5 8.5a5 5 0 0 1-7-7L13 4a3.3 3.3 0 0 1 4.7 4.7L9.5 17a1.7 1.7 0 0 1-2.4-2.4L14.5 7"/>',send:'<path d="M21 3 10 14M21 3l-7 18-4-7-7-4z"/>',heart:'<path d="M12 20.5C5 16 3 12.5 3 9.5A4.5 4.5 0 0 1 12 7.5a4.5 4.5 0 0 1 9 2c0 3-2 6.5-9 11z"/>',share:'<path d="M14 4l7 6-7 6v-4c-6 0-9 2-11 6 0-6 3-10 11-10z"/>',eye:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',chat:'<path d="M20 12a8 8 0 0 1-11.5 7.2L4 20l1-4A8 8 0 1 1 20 12z"/>',users:'<circle cx="9" cy="8" r="3.2"/><path d="M3 19c0-3.5 2.7-5.5 6-5.5s6 2 6 5.5"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.5 0 4 1.7 4 4.5"/>',live:'<circle cx="12" cy="12" r="2" fill="currentColor"/><path d="M8 8a5.7 5.7 0 0 0 0 8M16 8a5.7 5.7 0 0 1 0 8M5 5a10 10 0 0 0 0 14M19 5a10 10 0 0 1 0 14"/>',close:'<path d="M6 6l12 12M18 6 6 18"/>',gear:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/>',user:'<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/>',bookmark:'<path d="M6 3h12v18l-6-4-6 4z"/>',devices:'<rect x="3" y="5" width="18" height="11" rx="2"/><path d="M8 20h8M12 16v4"/>',star:'<path d="m12 3 2.8 5.8 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.3l1.1-6.2L3 9.7l6.2-.9z"/>',wallet:'<rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M16 12.5h2M3 10h18"/>',globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',lock:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',bell:'<path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4zM10 21h4"/>',help:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.6 2.6 0 0 1 5 1c0 1.8-2.5 2-2.5 3.5M12 17v.2"/>',info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.2"/>',logout:'<path d="M10 4H5v16h5M16 8l4 4-4 4M20 12H9"/>',userplus:'<circle cx="10" cy="8" r="4"/><path d="M3 21c0-4 3.2-6.5 7-6.5M19 8v6M16 11h6"/>',image:'<rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="9" cy="10" r="1.6"/><path d="m4 18 5-5 4 4 3-3 4 4"/>',pin:'<path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',play:'<path d="M8 5v14l11-7z"/>',pause:'<path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/>',vol:'<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/>',checks:'<path d="m2 13 4 4 8-9M10 15l2 2 9-10"/>',palette:'<path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 1.5-2.2-.5-1.3.2-2.3 1.6-2.3H17a4 4 0 0 0 4-4C21 6.8 17 3 12 3z"/><circle cx="8" cy="11" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16" cy="11" r="1"/>',db:'<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/>',phin:'<path d="M3 4l6 6M9 4v6H3"/><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A15 15 0 0 1 3 6"/>',plane:'<path d="M3 11l18-8-8 18-2-8z"/>',drop:'<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>',file:'<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/>',music:'<path d="M9 18V6l11-2v12"/><circle cx="7" cy="18" r="2.5"/><circle cx="18" cy="16" r="2.5"/>',trash:'<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13M10 11v6M14 11v6"/>',copy:'<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',chip:'<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>'};
@@ -509,7 +582,7 @@ const POOL=['يا سلام 😍','الله الله','أجمل ليلة','🔥�
 const CALLS0=[{c:'ahmed',d:['3 دقائق · مكالمة صوتية','3 min · voice call'],tm:'9:40 PM',v:0},{c:'sara',d:['12 دقيقة · فيديو','12 min · video'],tm:'9:20 PM',v:1},{c:'omar',d:['5 ثواني · مكالمة صوتية','5 sec · voice call'],tm:'8:15 PM',v:0},{c:'family',d:['40 دقيقة · فيديو','40 min · video'],tm:'7:10 PM',v:1},{c:'noor',d:['لم يرد · مكالمة صوتية','No answer · voice call'],tm:'6:30 PM',v:0,x:1},{c:'aisha',d:['8 دقائق · فيديو','8 min · video'],tm:'5:45 PM',v:1}];
 /* ---------- components ---------- */
 const LUDOIMG='ludo-tab-v10.png';
-const nav=a=>`<nav class="nav">${[['chats','chat',T('الدردشات','Chats'),CH.reduce((a,c)=>a+(c.un||0),0)],['camera','camera',T('الكاميرا','Camera')],['status','',T('الحالة','Status')],['ludo','dice',T('لودو','Ludo')],['calls','phone',T('المكالمات','Calls')]].map(([id,ic,l,bd])=>id==='status'?`<button class="mid ${a===id?'on':''}" data-go="status"><span class="ring"><i></i></span><span style="height:23px"></span>${l}</button>`:`<button class="${a===id?'on':''} ${id==='ludo'?'lv':''}" data-go="${id}">${id==='ludo'?`<img class="ltab" src="${LUDOIMG}" alt="">`:ico(ic)}${l}${bd?`<span class="bd">${bd}</span>`:''}</button>`).join('')}</nav>`;
+const nav=a=>`<nav class="nav">${[['chats','chat',T('الدردشات','Chats'),CH.reduce((a,c)=>a+(c.un||0),0)],['camera','camera',T('الكاميرا','Camera')],['jota','',T('جوطه','Jota')],['status','live',T('الحالة','Status')],['calls','phone',T('المكالمات','Calls')]].map(([id,ic,l,bd])=>id==='jota'?`<button class="mid ${a===id?'on':''}" data-go="jota"><span class="ring jr"><i>✦</i></span><span style="height:23px"></span>${l}</button>`:`<button class="${a===id?'on':''}" data-go="${id}">${ico(ic)}${l}${bd?`<span class="bd">${bd}</span>`:''}</button>`).join('')}</nav>`;
 const hdr=(title,{back=1,r=''}={})=>`<div class="hdr">${back?`<button class="ib" data-go="back" aria-label="back">${ico('back')}</button>`:'<span class="ib"></span>'}<h1>${title}</h1><span style="display:flex">${r||'<span class="ib"></span>'}</span></div>`;
 const ibtn=(ic,go,extra='')=>`<button class="ib" ${go.startsWith('act:')?`data-act="${go.slice(4)}"`:`data-go="${go}"`} ${extra}>${ico(ic)}</button>`;
 const seg=(items,cur,act,fill)=>`<div class="seg ${fill?'fill':''}">${items.map(([k,l])=>`<button class="${k===cur?'on':''}" data-act="${act}" data-v="${k}">${l}</button>`).join('')}</div>`;
@@ -518,12 +591,16 @@ const msgsHTML=(id,grp)=>`<div class="date">${T('اليوم','Today')}</div>`+ms
 /* ---------- screens ---------- */
 const S={};
 S.login=()=>{const en=state.lang==='en';return `<div class="scr full login"><div class="bgph"></div><div class="shade"></div><div class="lg"><img src="${LOGO}" alt="ونسة WANSA"></div><div class="lbox"><div class="lsw"><button class="${en?'on':''}" data-act="lang" data-v="en">English</button><button class="${en?'':'on'}" data-act="lang" data-v="ar">عربي</button></div><button class="cta" data-act="modal" data-v="login">${T('تسجيل الدخول','Sign in')}</button><button class="cta gh" data-act="modal" data-v="signup">${T('إنشاء حساب','Create account')}</button><div class="or">${T('أو تسجيل عبر','Or continue with')}</div><div class="soc"><button data-act="modal" data-v="social" aria-label="Google"><svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.2c0-.8-.1-1.5-.2-2.2H12v4.2h5.9a5 5 0 0 1-2.2 3.3v2.7h3.5c2.1-1.9 3.3-4.7 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.2 1-3.8 1-2.9 0-5.4-2-6.3-4.6H2.1v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.7 14c-.2-.7-.4-1.3-.4-2s.1-1.4.4-2V7.2H2.1a11 11 0 0 0 0 9.6z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.1-3.1A11 11 0 0 0 2.1 7.2L5.7 10c.9-2.6 3.4-4.6 6.3-4.6z"/></svg></button><button class="ap" data-act="modal" data-v="social" aria-label="Apple"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.8-3-.8C6.9 7.5 5.4 8.4 4.6 9.8c-1.7 2.9-.4 7.2 1.2 9.5.8 1.1 1.7 2.4 2.9 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3 .8c1.2 0 2-1.1 2.8-2.3.9-1.3 1.2-2.5 1.3-2.6-.1 0-2.4-.9-2.4-3.6zM14.2 5.6c.6-.8 1.1-1.8.9-2.9-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.8-1 2.8 1 .1 2.1-.5 2.8-1.3z"/></svg></button><button class="ph" data-act="modal" data-v="login" aria-label="Phone">${ico('phone')}</button></div><button class="skip" data-act="start">${T('الدخول للتجربة بدون حساب','Try the demo without an account')}</button></div></div>`};
+function fabHTML(){const o=state.fab,sh=state.fsheet;
+ const act=[['search',T('بحث في الأصدقاء','Search friends'),'fabgo','search'],['userplus',T('إضافة جديدة','Add new'),'fabsheet','add'],['chat',T('بدء محادثة جديدة','New chat'),'fabsheet','new']];
+ let h=`${o?`<div class="fabbg" data-act="fabtog"></div><div class="fabm">${act.map(([ic,l,a2,v])=>`<button data-act="${a2}" data-v="${v}"><span>${l}</span><i>${ico(ic)}</i></button>`).join('')}</div>`:''}<button class="fab ${o?'x':''}" data-act="fabtog" aria-label="new">${o?ico('close'):ico('chat')}</button>`;
+ if(sh==='new')h+=`<div class="lgsheet" onclick="if(event.target===this)ACT.fabsheet({dataset:{v:''}})" style="position:absolute;z-index:40"><div class="sh"><h3>${T('محادثة جديدة','New chat')}</h3><div class="fcl">${CH.map(c=>`<button class="row" data-go="chat" data-id="${c.id}"><span>${av(c.k,44)}</span><span class="mid"><b class="nm l">${c.n}</b></span></button>`).join('')}</div></div></div>`;
+ if(sh==='add')h+=`<div class="lgsheet" onclick="if(event.target===this)ACT.fabsheet({dataset:{v:''}})" style="position:absolute;z-index:40"><div class="sh"><h3>${T('إضافة جهة اتصال','Add contact')}</h3><input id="fabN" class="jinp" dir="auto" placeholder="${T('الاسم','Name')}"><input id="fabP" class="jinp" dir="ltr" inputmode="tel" placeholder="${T('رقم الهاتف (اختياري)','Phone (optional)')}"><button class="cta" data-act="fabadd">${T('إضافة وبدء محادثة','Add & start chat')}</button><button class="cta gh" data-act="fabsheet" data-v="">${T('إلغاء','Cancel')}</button></div></div>`;
+ return h}
 S.chats=()=>{const f=state.filter;const list=CH.filter(c=>f==='all'||(f==='groups'&&c.type==='group')||(f==='friends'&&c.type!=='group')||(f==='calls'&&c.calls));
  const st=[['ahmed','Ahmed'],['sara','Sara'],['family','Family'],['noor','Noor'],['tech','Tech']];
  return `<div class="scr">${`<div class="hdr"><button class="ib" data-go="menu" aria-label="menu">${ico('menu')}</button><div style="flex:1;text-align:center"><b style="font-size:17px">${esc(state.name)}<i class="dot"></i></b><small class="green" style="display:block;font-size:12.5px">${T('متصل الآن','Online now')}</small></div><button class="ib" data-go="profile" style="width:46px;height:46px" aria-label="profile">${av('me',40)}</button></div>`}<div class="body"><button class="search" data-go="search">${ico('search')}<span>${T('ابحث في ونسة...','Search Wansa...')}</span></button>
- <div class="stories"><button class="st" data-go="createStatus"><span class="add">${ico('plus')}</span>${T('أضف قصة','Add story')}</button>${st.map(([k,n])=>`<button class="st" data-go="status"><span class="rg">${av(k,57)}</span>${n}</button>`).join('')}</div>
- ${seg([['all',T('الكل','All')],['groups',T('المجموعات','Groups')],['friends',T('الأصدقاء','Friends')],['calls',T('المكالمات','Calls')]],f,'filter')}
- ${list.length?list.map(c=>`<button class="row" data-go="chat" data-id="${c.id}"><span class="${c.on?'on-dot':''}">${av(c.k,52)}</span><span class="mid"><b class="nm l">${c.n}</b><span class="pv l">${c.pi?ico(c.pi):''}${T(c.pv[0],c.pv[1])}</span></span><span class="meta"><span>${c.tm}</span>${c.un?`<span class="cnt">${c.un}</span>`:''}</span></button>`).join(''):`<div class="empty">${T('لا توجد محادثات','No chats')}</div>`}</div>${nav('chats')}</div>`};
+ ${list.length?list.map(c=>`<button class="row" data-go="chat" data-id="${c.id}"><span class="${c.on?'on-dot':''}">${av(c.k,52)}</span><span class="mid"><b class="nm l">${c.n}</b><span class="pv l">${c.pi?ico(c.pi):''}${T(c.pv[0],c.pv[1])}</span></span><span class="meta"><span>${c.tm}</span>${c.un?`<span class="cnt">${c.un}</span>`:''}</span></button>`).join(''):`<div class="empty">${T('لا توجد محادثات','No chats')}</div>`}</div>${fabHTML()}${nav('chats')}</div>`};
 S.status=()=>{const own=state.stories[0];const cards=[{k:'noor',n:'Noor',t:T('منذ ساعة','1h ago'),cap:T('قهوة المساء ☕','Evening coffee ☕'),f:'hue-rotate(150deg) saturate(1.1)',e:63},own?{k:'me',n:state.name,t:T('الآن','Now'),cap:own.t||'',kind:own.k,mid:own.mid,e:0,own:1}:{k:'omar',n:'Omar',t:T('منذ 10 دقائق','10 min ago'),cap:T('☀ مساء الخير من ونسة','☀ Good evening from Wansa'),f:'',e:124},{k:'ahmed',n:'Ahmed',t:T('منذ ساعتين','2h ago'),cap:T('أجواء الرياض','Riyadh vibes'),f:'hue-rotate(-28deg) saturate(1.2)',e:88}];
  return `<div class="scr">${`<div class="hdr">${ibtn('camera','createStatus')}<h1>${T('الحالة','Status')}</h1>${ibtn('search','search')}${ibtn('more','act:soon')}</div>`}<div class="body"><div class="stories"><button class="st" data-go="createStatus"><span class="add">${ico('plus')}</span>${T('حالتك','Your status')}</button>${['ahmed','sara','family','noor','hassan'].map(k=>`<button class="st" data-go="story" data-i="0"><span class="rg">${av(k,57)}</span>${P[k]?P[k].n:k}</button>`).join('')}</div>
  <div class="cards" id="cards">${cards.map((c,i)=>`<button class="sc" data-go="story" data-i="${i}"><span class="bgp" style="${c.kind&&c.kind!=='sunset'?'':`background-image:var(--sun);background-position:50% 22%;filter:${c.f||'none'}`}">${c.kind&&c.kind!=='sunset'?sthumb({k:c.kind,mid:c.mid}):''}</span><span class="sh"></span><span class="prog"><i class="d"></i><i></i><i></i></span><span class="top">${av(c.k,38)}<span><b>${esc(c.n)}</b><small>${c.t}</small></span></span><span class="bot"><span class="cap">${esc(c.cap)}</span><span class="acts"><span style="display:flex;gap:5px;align-items:center">${ico('eye')}${c.e}</span><span class="gap"></span>${ico('heart')}${ico('share')}</span></span></button>`).join('')}</div></div>${nav('status')}</div>`};
@@ -555,9 +632,9 @@ function modalHTML(t){const L={login:T('تسجيل الدخول','Sign in'),sign
  else b=`<p class="notice">${T({golive:'البث الحقيقي يحتاج خادم بث وصلاحية الكاميرا.',social:'التسجيل الاجتماعي يحتاج ربط حسابات Google وApple.',payments:'المدفوعات تحتاج ربط بوابة دفع.',devices:'ربط الأجهزة يحتاج حساباً فعلياً.'}[t]||'هذه الواجهة تجريبية، وستُربط بالخدمات الفعلية في مرحلة التطوير.',{golive:'Real streaming needs a streaming server and camera access.',social:'Social sign-in needs Google and Apple accounts connected.',payments:'Payments need a payment gateway.',devices:'Linking devices needs a real account.'}[t]||'This is a demo screen and will connect to real services during development.')}</p>`;
  return `<div class="ov" data-act="closeov"><div class="modal"><div style="display:flex;align-items:center"><h3>${L[t]||t}</h3><button class="ib" data-act="closemo" aria-label="close">${ico('close')}</button></div>${b}</div></div>`}
 /* ---------- engine ---------- */
-const TABS=['chats','camera','status','ludo','calls'];
+const TABS=['chats','camera','jota','status','calls'];
 function render(){clearT();const sc=state.screen;$('#app').className=state.light?'light':'';$('#scr').innerHTML=(S[sc]||S.chats)();$('#mo').innerHTML=state.modal?modalHTML(state.modal):'';hydrate($('#app'));after(sc)}
-function go(id,d={}){let s=id;if(id==='back'){s=state.hist.pop()||'chats'}else{if(id==='chat'){state.chat=d.id;{const _c=CH.find(x=>x.id===d.id);if(_c&&_c.un){_c.un=0;const _r=LS('wansaRead',{});_r[d.id]=1;SV('wansaRead',_r)}}s=chatObj(d.id).type==='group'?'group':'chat'}else if(id==='call'){state.callId=d.id;state.callV=+d.v||0;s='call'}else if(id==='liveview')state.lv=+d.i||0;else if(id==='story')state.si=0;if(TABS.includes(s))state.hist=[];else if(state.screen!==s&&!['call'].includes(state.screen))state.hist.push(state.screen)}
+function go(id,d={}){state.fab=0;state.fsheet='';let s=id;if(id==='back'){s=state.hist.pop()||'chats'}else{if(id==='chat'){state.chat=d.id;{const _c=CH.find(x=>x.id===d.id);if(_c&&_c.un){_c.un=0;const _r=LS('wansaRead',{});_r[d.id]=1;SV('wansaRead',_r)}}s=chatObj(d.id).type==='group'?'group':'chat'}else if(id==='call'){state.callId=d.id;state.callV=+d.v||0;s='call'}else if(id==='liveview')state.lv=+d.i||0;else if(id==='story')state.si=0;if(TABS.includes(s))state.hist=[];else if(state.screen!==s&&!['call'].includes(state.screen))state.hist.push(state.screen)}
  if(id==='chat'&&state.screen==='chat'||false){}state.screen=s;state.modal=null;if(s==='search'){state.q='';state.qt='all'}if(s==='wallpaper')state.wps=null;render()}
 function toast(t){const e=$('#tt');e.textContent=t;e.classList.add('s');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('s'),1700)}
 function saveAll(){SV('wansaMessages',state.messages);SV('wansaStories',state.stories);SV('wansaCommunities',state.communities);SV('wansaCalls',state.calls)}
@@ -580,7 +657,9 @@ const ACT={
  closeov(t,e){if(e.target===t)ACT.closemo()},
  start(){SV('wansaStarted',1);state.modal=null;go('chats')},
  logout(){SV('wansaStarted',0);go('login')},
- filter(t){state.filter=t.dataset.v;render()},cfilter(t){state.cfilter=t.dataset.v;render()},lfilter(t){state.lfilter=t.dataset.v;render()},
+ filter(t){state.filter=t.dataset.v;render()},
+ fabtog(){state.fab=state.fab?0:1;render()},fabgo(t){state.fab=0;go(t.dataset.v)},fabsheet(t){state.fab=0;state.fsheet=t.dataset.v||'';render()},
+ fabadd(){const n=($('#fabN')||{}).value.trim();if(!n)return toast(T('اكتب الاسم','Enter a name'));const id='u'+Date.now(),ks=['sara','noor','ahmed','omar'];CH.unshift({id,k:ks[Math.random()*4|0],n,pv:[T('ابدأ المحادثة','Say hello'),'Say hello'],tm:nowT(),un:0});state.fsheet='';go('chat',{id})},cfilter(t){state.cfilter=t.dataset.v;render()},lfilter(t){state.lfilter=t.dataset.v;render()},
  qt(t){state.qt=t.dataset.v;render();$('#q')?.focus()},qclear(){state.q='';render();$('#q')?.focus()},
  addu(){toast(T('تم إرسال طلب الصداقة','Friend request sent'))},soon(){toast(T('قريباً في النسخة الكاملة','Coming in the full version'))},
  send(){const i=$('#msgIn');if(!i)return;const t=i.value.trim();if(!t){return ACT.rec()}const grp=chatObj(state.chat).type==='group';i.value='';updSend();addMsg({w:'out',t,tm:nowT()},grp);reply()},
@@ -931,16 +1010,16 @@ function lBuy(c,id){const it=lItem(c,id);if(lOwned(c,it))return 'owned';
 const lStats=()=>{try{return Object.assign({p:0,w:0},JSON.parse(localStorage.getItem('wansaLudoStats')))}catch(e){return {p:0,w:0}}};
 function lStat(win){const s=lStats();s.p++;if(win)s.w++;try{localStorage.setItem('wansaLudoStats',JSON.stringify(s))}catch(e){}}
 /* ---- engine (pure on a plain object G so it can be JSON-synced) ---- */
-function gNew(players){return {ver:0,players,pieces:[[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1]],turn:0,roll:0,phase:'roll',sixes:0,win:-1,last:null,msg:''}}
-function gMoves(G){const s=G.turn,r=G.roll,o=[];if(!r)return o;G.pieces[s].forEach((p,i)=>{if(p<0){if(r===6)o.push(i)}else if(p+r<=56)o.push(i)});return o}
+function gNew(players){return {ver:0,n:players.filter(p=>p.type!=='none').length,players,pieces:[[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1],[-1,-1,-1,-1]],turn:0,roll:0,phase:'roll',sixes:0,win:-1,last:null,msg:''}}
+function gMoves(G){const s=G.turn,r=G.roll,o=[];if(!r)return o;G.pieces[s].forEach((p,i)=>{if(p<0){if(r===6||(G.mode==='arrow'&&r===1))o.push(i)}else if(p+r<=56)o.push(i)});return o}
 function gApply(G,pi){const s=G.turn,r=G.roll,p=G.pieces[s][pi],np=p<0?0:p+r;let cap=0;
  G.pieces[s][pi]=np;G.last={seat:s,pi,from:p,to:np,cap:[]};
  if(np<=50){const ab=(LSTART[s]+np)%52;if(!LSAFE.includes(ab)){for(let o=0;o<4;o++){if(o===s)continue;G.pieces[o].forEach((q,qi)=>{if(q>=0&&q<=50&&(LSTART[o]+q)%52===ab){G.pieces[o][qi]=-1;cap++;G.last.cap.push([o,qi])}})}}}
  const fin=np===56;
- if(G.pieces[s].every(x=>x===56)){G.win=s;G.phase='over';return {cap,fin,win:1}}
+ if(G.pieces[s].filter(x=>x===56).length>=(G.mode==='quick'?2:4)){G.win=s;G.phase='over';return {cap,fin,win:1}}
  if(r===6||cap||fin){G.phase='roll';G.roll=0}else gNext(G);
  return {cap,fin,win:0}}
-function gNext(G){G.turn=(G.turn+1)%4;G.roll=0;G.phase='roll';G.sixes=0}
+function gNext(G){do{G.turn=(G.turn+1)%4}while(G.players[G.turn].type==='none');G.roll=0;G.phase='roll';G.sixes=0}
 function botPick(G,mv){const s=G.turn,r=G.roll;let best=mv[0],bs=-1e9;
  for(const i of mv){const p=G.pieces[s][i],np=p<0?0:p+r;let sc=Math.random()*8+np*.3;
   if(p<0)sc+=50;if(np===56)sc+=80;if(np>50&&p<=50)sc+=40;
@@ -954,8 +1033,15 @@ function botPick(G,mv){const s=G.turn,r=G.roll;let best=mv[0],bs=-1e9;
 const BOTN=['سلمى','خالد','نور','عمر','ريم','يوسف','هدى','زياد','ليلى','مازن'];
 function lBots(){const nm=BOTN.slice().sort(()=>Math.random()-.5);return [1,2,3].map(i=>({name:nm[i],type:'bot',cfg:avRand()}))}
 
+const LMODES=[['classic','🎲',T('كلاسيك','Classic'),T('القواعد التقليدية — تحتاج 6 للخروج','Traditional rules — a 6 to leave the yard')],['arrow','🏹',T('السهم','Arrow'),T('اخرج بـ 1 أو 6','Leave the yard with a 1 or a 6')],['master','👑',T('ماستر','Master'),T('تبدأ بقطعة على اللوحة','Start with a piece already on the board')],['quick','⚡',T('سريع','Quick'),T('أول من يُدخل قطعتين يفوز','First to bring 2 pieces home wins')]];
+const LSTEPS=[50,100,200,500,1000,2000,5000];
+function gMode(G,m){G.mode=m||'classic';if(G.mode==='master')for(let s=0;s<4;s++)G.pieces[s][0]=0;return G}
+
+const lXp=()=>{const s=lStats();return s.p*10+s.w*30};
+function lLevel(){const x=lXp();let l=1,need=60,base=0;while(x>=base+need){base+=need;l++;need=Math.round(need*1.35)}return {l,cur:x-base,need}}
+
 /* ===== late: Ludo — rendering, controller, online (PeerJS) ===== */
-const LG={face:{},hop:{},rollKey:0,hopKey:0,settleAt:0,busyUntil:0,mode:'local',G:null,my:0,stake:100,tm:0,fast:0,emo:{},room:'',paid:0,settled:0,muted:0,sig:'',lastRoll:'',busy:0};
+const LG={opt:(()=>{try{return JSON.parse(localStorage.getItem('wansaLgOpt'))||{snd:1,ntf:1}}catch(e){return{snd:1,ntf:1}}})(),panel:'',face:{},hop:{},rollKey:0,hopKey:0,settleAt:0,busyUntil:0,mode:'local',G:null,my:0,stake:100,tm:0,fast:0,emo:{},room:'',paid:0,settled:0,muted:0,sig:'',lastRoll:'',busy:0};
 let NET=null,_dg=0;
 const PIPS={1:[[50,50]],2:[[30,30],[70,70]],3:[[28,28],[50,50],[72,72]],4:[[30,30],[70,30],[30,70],[70,70]],5:[[28,28],[72,28],[50,50],[28,72],[72,72]],6:[[30,24],[70,24],[30,50],[70,50],[30,76],[70,76]]};
 function lDie(v,id,s=64){const k=lItem('dice',id),g='dg'+(_dg++);
@@ -984,12 +1070,13 @@ function lgHop(){const G=LG.G,l=G.last;LG.hopKey=G.mc;if(!l||LG.fast)return;cons
  LG.busyUntil=Date.now()+steps.length*T+200;run()}
 function lStar(cx,cy,r,f){let p='';for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,rr=i%2?r*.45:r;p+=(i?'L':'M')+(cx+Math.cos(a)*rr).toFixed(2)+' '+(cy+Math.sin(a)*rr).toFixed(2)}return `<path d="${p}Z" fill="${f}"/>`}
 function lBoardInner(th,pl){const c=th.cell,ln=th.line;let h=lDefs();
- for(let s=0;s<4;s++){const o=LYARD[s];const px=o[0]*10,py=o[1]*10;h+=`<rect x="${px}" y="${py}" width="60" height="60" rx="7" fill="${LSEAT[s]}"/>`;
+ for(let s=0;s<4;s++){const o=LYARD[s];const px=o[0]*10,py=o[1]*10;if(pl&&pl[s]&&pl[s].type==='none'){h+=`<rect x="${px}" y="${py}" width="60" height="60" rx="7" fill="${LSEAT[s]}" opacity=".28"/>`;continue}h+=`<rect x="${px}" y="${py}" width="60" height="60" rx="7" fill="${LSEAT[s]}"/>`;
   if(pl&&pl[s]){h+=`<clipPath id="yc${s}"><rect x="${px}" y="${py}" width="60" height="60" rx="7"/></clipPath><g clip-path="url(#yc${s})" opacity=".55"><g transform="rotate(${-(3-LG.my)*90} ${px+30} ${py+30})">${s===LG.my&&MYAV?`<image href="${MYAV}" x="${px}" y="${py}" width="60" height="60" preserveAspectRatio="xMidYMid slice"/>`:avSvg(pl[s].cfg).replace('<svg viewBox="0 0 100 100">',`<svg x="${px}" y="${py}" width="60" height="60" viewBox="0 0 100 100">`)}</g></g><rect x="${px+1}" y="${py+1}" width="58" height="58" rx="6.5" fill="none" stroke="${LSEAT[s]}" stroke-width="3"/>`}
   else h+=`<rect x="${px+8}" y="${py+8}" width="44" height="44" rx="9" fill="${c}" opacity=".92"/>`;
   LSLOT.forEach(q=>h+=`<circle cx="${(o[0]+q[0])*10}" cy="${(o[1]+q[1])*10}" r="5.2" fill="${LSEAT[s]}" stroke="#fff" stroke-width="1.1" opacity="${pl?.95:.9}"/>`)}
  PATH.forEach((q,i)=>{const sd=LSTART.indexOf(i);h+=`<rect x="${q[0]*10}" y="${q[1]*10}" width="10" height="10" fill="${sd>=0?LSEAT[sd]:c}" stroke="${ln}" stroke-width=".6"/>`;if(LSAFE.includes(i)&&sd<0)h+=lStar(q[0]*10+5,q[1]*10+5,3.6,'#b9b9c9')});
  LHOME.forEach((a,s)=>a.forEach(q=>h+=`<rect x="${q[0]*10}" y="${q[1]*10}" width="10" height="10" fill="${LSEAT[s]}" stroke="${ln}" stroke-width=".6" opacity=".92"/>`));
+ LHOME.forEach((a,s)=>a.forEach((q,i)=>{if(i>=a.length-1)return;const n=a[i+1],ang=Math.atan2(n[1]-q[1],n[0]-q[0])*180/Math.PI;h+=`<path d="M-2.6 -2.4L2.8 0L-2.6 2.4L-1.4 0Z" transform="translate(${q[0]*10+5} ${q[1]*10+5}) rotate(${ang})" fill="#fff" opacity=".85"/>`}));
  const tri=[[[60,60],[60,90],[75,75]],[[60,60],[90,60],[75,75]],[[90,60],[90,90],[75,75]],[[60,90],[90,90],[75,75]]];
  tri.forEach((t,s)=>h+=`<path d="M${t[0]} L${t[1]} L${t[2]}Z" fill="${LSEAT[s]}" stroke="#fff" stroke-width=".6"/>`);
  return h}
@@ -1003,9 +1090,9 @@ function lCell(s,p,pi){if(p<0){const o=LYARD[s],q=LSLOT[pi];return [(o[0]+q[0])*
 function lPos(G){const m={},res=[];for(let s=0;s<4;s++)for(let i=0;i<4;i++){const c=lCell(s,G.pieces[s][i],i);const k=c[0]+','+c[1];(m[k]=m[k]||[]).push([s,i])}
  for(const k in m){const a=m[k],n=a.length;a.forEach(([s,i],j)=>{const c=lCell(s,G.pieces[s][i],i);const off=n>1&&G.pieces[s][i]>=0&&G.pieces[s][i]<56?(j-(n-1)/2)*3.4:0;res[s*4+i]=[c[0]+off,c[1],n>1&&G.pieces[s][i]>=0?.8:1]})}return res}
 const seatAt=pos=>(((pos-(3-LG.my))%4)+4)%4;
-function lChip(s){const G=LG.G,p=G.players[s],act=G.turn===s&&G.phase!=='over'&&G.phase!=='lobby';const e=LG.emo[s];const b=lItem('bub',p.bub||'plain');
- return `<div class="lgc ${act?'act':''}" style="--sc:${LSEAT[s]}"><span class="lgav">${avSvg(p.cfg)}${p.type==='remote'||s===LG.my&&NET?`<i class="lgmic ${NET&&NET.voice&&!(s===LG.my&&LG.muted)?'':'off'}">${NET&&NET.voice&&!(s===LG.my&&LG.muted)?'🎙':'🔇'}</i>`:''}</span><span class="lgi"><b class="l">${esc(p.name)}${s===LG.my?` <small>(${T('أنت','you')})</small>`:''}</b><small class="pcn">${G.pieces[s].filter(x=>x===56).length}/4 🏁</small></span>${e?`<span class="lgem" style="background:${b.bg};color:${b.fg};${b.bd?'border:1.5px solid '+b.bd:''}">${e}</span>`:''}</div>`}
-function lgTokens(){const G=LG.G;let h='';for(let s=0;s<4;s++)for(let i=0;i<4;i++)h+=`<g class="tk" id="tk${s}${i}" data-act="lgmove" data-s="${s}" data-pi="${i}"><circle class="hl" r="6"/><g class="tkb"><g transform="rotate(${-(3-LG.my)*90}) scale(1.3) translate(0,.8)">${lTokG(1,s)}</g></g></g>`;return h}
+function lChip(s){const G=LG.G,p=G.players[s];if(p.type==='none')return '';const act=G.turn===s&&G.phase!=='over'&&G.phase!=='lobby';const e=LG.emo[s];const b=lItem('bub',p.bub||'plain');
+ return `<div class="lgc ${act?'act':''}" style="--sc:${LSEAT[s]}"><span class="lgav">${avSvg(p.cfg)}${p.type==='remote'||s===LG.my&&NET?`<i class="lgmic ${NET&&NET.voice&&!(s===LG.my&&LG.muted)?'':'off'}">${NET&&NET.voice&&!(s===LG.my&&LG.muted)?'🎙':'🔇'}</i>`:''}</span>${act&&!LG.fast?`<i class="tmr"><u style="animation-duration:${LTURN}s"></u></i>`:''}<span class="lgi"><b class="l">${esc(p.name)}${s===LG.my?` <small>(${T('أنت','you')})</small>`:''}</b><small class="pcn">${G.pieces[s].filter(x=>x===56).length}/4 🏁</small></span>${e?`<span class="lgem" style="background:${b.bg};color:${b.fg};${b.bd?'border:1.5px solid '+b.bd:''}">${e}</span>`:''}</div>`}
+function lgTokens(){const G=LG.G;let h='';for(let s=0;s<4;s++)for(let i=0;i<4;i++)h+=`<g class="tk" id="tk${s}${i}" data-act="lgmove" data-s="${s}" data-pi="${i}"><circle class="hl" r="6"/><g class="tkb"><g transform="rotate(${-(3-LG.my)*90}) scale(1.3) translate(0,.8)">${lTokG(1,s)}</g><path class="ptr" d="M-3.2 -13.5L3.2 -13.5L0 -8.6Z" fill="#35ffa0" stroke="#06331f" stroke-width=".7" transform="rotate(${-(3-LG.my)*90}) translate(0,-2)"/></g></g>`;return h}
 function lgMount(){const G=LG.G;if(!G||!$('#lgsvg'))return;const th=lItem('theme',lEq().theme);
  $('#lgb').setAttribute('style',lBgStyle(th));$('#lgd').innerHTML=lDeco(th);
  $('#lgsvg').innerHTML=lBoardInner(th,G.players)+`<g id="lgtk">${lgTokens()}</g>`;$('#lgsvg').style.transform=`rotate(${(3-LG.my)*90}deg)`;
@@ -1019,17 +1106,25 @@ function lgDraw(){const G=LG.G;if(!G||!$('#lgsvg'))return;
  const s2=G.players.map(p=>JSON.stringify(p.cfg)).join('|');if(LG.sig2!==s2&&LG.sig2!==undefined){LG.sig2=s2;const th=lItem('theme',lEq().theme);$('#lgsvg').innerHTML=lBoardInner(th,G.players)+`<g id="lgtk">${lgTokens()}</g>`}LG.sig2=s2;
  if(LG.sig!==G.players.map(p=>p.tok).join()){$('#lgtk').innerHTML=lgTokens();LG.sig=G.players.map(p=>p.tok).join()}
  const pos=lPos(G),settled=Date.now()>=LG.settleAt,mine=G.turn===LG.my&&G.phase==='move'&&settled,mv=mine?gMoves(G):[];if(G.phase==='move'&&!settled&&!LG.stm){LG.stm=setTimeout(()=>{LG.stm=0;lgDraw()},LG.settleAt-Date.now()+30)}
- for(let s=0;s<4;s++)for(let i=0;i<4;i++){const el=$('#tk'+s+i);if(!el)continue;if(LG.hop[s*4+i])continue;const q=pos[s*4+i];el.style.transform=`translate(${q[0]}px,${q[1]}px) scale(${q[2]})`;el.classList.toggle('mv',mine&&s===LG.my&&mv.includes(i));el.style.zIndex=G.pieces[s][i]>=0?2:1}
+ for(let s=0;s<4;s++)for(let i=0;i<4;i++){const el=$('#tk'+s+i);if(!el)continue;if(G.players[s].type==='none'){el.style.display='none';continue}if(LG.hop[s*4+i])continue;const q=pos[s*4+i];el.style.transform=`translate(${q[0]}px,${q[1]}px) scale(${q[2]})`;el.classList.toggle('mv',mine&&s===LG.my&&mv.includes(i));el.style.zIndex=G.pieces[s][i]>=0?2:1}
  [[0,'#lgc0'],[1,'#lgc1'],[3,'#lgc3'],[2,'#lgc2']].forEach(([pos2,sel],k)=>{const e=$(sel);if(!e)return;const h=lChip(seatAt(pos2));if(e.__h!==h){e.__h=h;e.innerHTML=h}});[0,1,2,3].forEach(p=>{const c=$('#lgcell'+p);if(c)c.dataset.seat=seatAt(p)});lgDice();if(G.mc&&LG.hopKey!==G.mc)lgHop();
  const m=$('#lgmsg');if(m)m.textContent=lgMsg();
- const pot=$('#lgpot');if(pot)pot.textContent=G.stake*4;
+ const pot=$('#lgpot');if(pot)pot.textContent=G.stake*(G.n||4);
  lgOverlay()}
+function lgPanel(){const G=LG.G,o=$('#lgov');const mt=LMODES.find(m=>m[0]===(G.mode||'classic'));const on=k=>LG.opt[k]?'on':'';
+ const row=(ic,l,act,k)=>`<button class="lgset" data-act="${act}"><span>${ic}</span><b>${l}</b>${k?`<i class="tg ${on(k)}"></i>`:'<em>›</em>'}</button>`;
+ if(LG.panel==='menu')return `<div class="lgsheet" onclick="if(event.target===this)ACT.lgpanel({dataset:{v:''}})"><div class="sh"><h3>${T('الإعدادات','Settings')}</h3>${row('🎙️',T('إعدادات الصوت','Voice settings'),'lgmute')}${row('🔊',T('الصوت والمؤثرات','Sound'),'lgopt','snd').replace('data-act="lgopt"','data-act="lgopt" data-k="snd"')}${row('🔔',T('الإشعارات','Notifications'),'lgopt','ntf').replace('data-act="lgopt"','data-act="lgopt" data-k="ntf"')}${row('📜',T('القواعد','Rules'),'lgrules')}${row('🚪',T('الخروج من اللعبة','Exit game'),'lgexit')}<button class="cta gh" data-act="lgpanel" data-v="">${T('إغلاق','Close')}</button></div></div>`;
+ if(LG.panel==='rules')return `<div class="lgmodal"><h3>📜 ${T('القواعد','Rules')} — ${mt[2]}</h3><p style="text-align:start;line-height:1.7">${mt[3]}<br>• ${T('النرد 6 = دور إضافي','A 6 gives another turn')}<br>• ${T('الأكل أو الدخول للبيت = دور إضافي','Capturing or finishing = another turn')}<br>• ${T('ثلاث ستات متتالية تضيع الدور','Three sixes in a row lose the turn')}<br>• ${T('الخانات ★ آمنة','★ cells are safe')}</p><button class="cta" data-act="lgpanel" data-v="menu">${T('رجوع','Back')}</button></div>`;
+ if(LG.panel==='exit'){const live=G.phase!=='over'&&G.phase!=='lobby'&&G.stake>0;return `<div class="lgmodal"><div style="font-size:46px">⚠️</div><h3>${T('تخرج من اللعبة؟','Leave the game?')}</h3><p>${live?T(`ستخسر رسوم الدخول 🪙 ${G.stake}`,`You will lose your entry fee 🪙 ${G.stake}`):T('سيتم إغلاق الطاولة','The table will close')}</p><button class="cta" data-act="lgpanel" data-v="">${T('أكمل اللعب','Keep playing')}</button><button class="cta gh" data-act="lgleave">${T('نعم، اخرج','Yes, leave')}</button></div>`}
+ if(LG.panel==='chat')return `<div class="lgsheet" onclick="if(event.target===this)ACT.lgpanel({dataset:{v:''}})"><div class="sh"><h3>💬 ${T('رسالة سريعة','Quick chat')}</h3><div class="qc">${[T('يلا نلعب','Let\'s go'),T('حظ سعيد','Good luck'),T('لعبة حلوة','Nice move'),T('استعجل','Hurry up'),T('ما شاء الله','Well played'),T('معليش','Oops')].map(x=>`<button data-act="lgemo" data-v="${x}">${x}</button>`).join('')}</div><div class="bigem">${['😂','😍','🔥','👏','😡','🥱','😎','🤩','👍','👎','🙏','💪'].map(e=>`<button data-act="lgemo" data-v="${e}">${e}</button>`).join('')}</div></div></div>`;
+ return ''}
 function lgOverlay(){const G=LG.G,o=$('#lgov');if(!o)return;
+ if(G.phase!=='over'&&G.phase!=='lobby'&&LG.panel){const h=lgPanel();if(o.__p!==h){o.__p=h;o.innerHTML=h}return}o.__p=null;
  if(G.phase==='lobby'){const ro=G.players.map((p,i)=>`<div class="lgr"><span class="lgav s">${avSvg(p.cfg)}</span><b>${esc(p.name)}</b><small>${p.type==='bot'?T('كمبيوتر','CPU'):T('لاعب','Player')}</small></div>`).join('');
   o.innerHTML=`<div class="lgmodal"><h3>${T('غرفة لودو','Ludo room')}</h3><div class="code" data-act="lgcopy">${LG.room||'...'}</div><small>${T('شارك الكود مع أصدقائك — اضغط للنسخ','Share this code — tap to copy')}</small><div class="lgrs">${ro}</div><small>${T('المقاعد الفارغة يملؤها الكمبيوتر · الرهان','Empty seats are filled by CPU · stake')}: 🪙 ${G.stake}</small>${LG.mode==='host'?`<button class="cta" data-act="lgstart">${T('ابدأ اللعبة','Start game')}</button>`:`<small class="green">${T('في انتظار المضيف...','Waiting for host...')}</small>`}<button class="cta gh" data-act="lgleave">${T('خروج','Leave')}</button></div>`;return}
- if(G.phase==='over'){const win=G.win===LG.my,pot=Math.round(G.stake*4*.9);o.innerHTML=`<div class="lgmodal"><div style="font-size:54px">${win?'🏆':'🎲'}</div><h3>${win?T('مبروك، فزت!','You won!'):T(`فاز ${esc(G.players[G.win].name)}`,`${esc(G.players[G.win].name)} won`)}</h3><p>${win?T(`ربحت 🪙 ${pot} و 💎 1`,`You won 🪙 ${pot} and 💎 1`):T(`خسرت 🪙 ${G.stake}`,`You lost 🪙 ${G.stake}`)}</p><small>${T('رصيدك','Balance')}: 🪙 ${coins()} · 💎 ${gems()}</small>${LG.mode==='local'?`<button class="cta" data-act="lgagain">${T('العب مرة أخرى','Play again')}</button>`:''}<button class="cta gh" data-act="lgleave">${T('القائمة','Menu')}</button></div>`;return}
+ if(G.phase==='over'){const win=G.win===LG.my,pot=Math.round(G.stake*(G.n||4)*.9);o.innerHTML=`<div class="lgmodal"><div style="font-size:54px">${win?'🏆':'🎲'}</div><h3>${win?T('مبروك، فزت!','You won!'):T(`فاز ${esc(G.players[G.win].name)}`,`${esc(G.players[G.win].name)} won`)}</h3><p>${win?T(`ربحت 🪙 ${pot} و 💎 1`,`You won 🪙 ${pot} and 💎 1`):T(`خسرت 🪙 ${G.stake}`,`You lost 🪙 ${G.stake}`)}</p><small>${T('رصيدك','Balance')}: 🪙 ${coins()} · 💎 ${gems()}</small>${LG.mode==='local'?`<button class="cta" data-act="lgagain">${T('العب مرة أخرى','Play again')}</button>`:''}<button class="cta gh" data-act="lgleave">${T('القائمة','Menu')}</button></div>`;return}
  o.innerHTML=''}
-function lgSettle(){const G=LG.G;if(G.phase==='over'&&!LG.settled){LG.settled=1;const win=G.win===LG.my;if(win){setCoins(coins()+Math.round(G.stake*4*.9));setGems(gems()+1)}lStat(win)}
+function lgSettle(){const G=LG.G;if(G.phase==='over'&&!LG.settled){LG.settled=1;const win=G.win===LG.my;if(win){setCoins(coins()+Math.round(G.stake*(G.n||4)*.9));setGems(gems()+1)}lStat(win)}
  if(G.phase!=='lobby'&&!LG.paid){LG.paid=1;setCoins(coins()-G.stake)}}
 /* ---- host / local controller ---- */
 function lgBroadcast(){if(!NET||LG.mode!=='host')return;const m={t:'st',G:LG.G};Object.values(NET.conns).forEach(c=>{try{c.send(m)}catch(e){}})}
@@ -1041,17 +1136,19 @@ function hRoll(seat){const G=LG.G;if(!G||G.phase!=='roll'||G.turn!==seat)return;
 function hMove(seat,pi){const G=LG.G;if(!G||G.phase!=='move'||G.turn!==seat||!gMoves(G).includes(pi))return;const r=gApply(G,pi);G.mc=(G.mc||0)+1;
  if(r.cap&&G.players[seat].type==='bot'&&Math.random()<.5)lgEmo(seat,['😎','😂','🔥'][Math.random()*3|0],1);
  lgSync()}
+const LTURN=15;
 function lgDrive(){clearTimeout(LG.tm);if(LG.mode==='guest')return;const G=LG.G;if(!G||G.phase==='lobby'||G.phase==='over')return;
  const bot=G.players[G.turn].type==='bot',ver=G.ver,f=LG.fast,ex=f?0:Math.max(0,LG.busyUntil-Date.now(),LG.settleAt-Date.now());
  if(G.phase==='roll'&&bot)LG.tm=setTimeout(()=>{if(LG.G===G&&G.ver===ver)hRoll(G.turn)},f?5:850+ex);
- else if(G.phase==='move'){const mv=gMoves(G);if(bot||mv.length===1)LG.tm=setTimeout(()=>{if(LG.G===G&&G.ver===ver&&G.phase==='move')hMove(G.turn,bot?botPick(G,mv):mv[0])},f?5:((bot?750:1000)+ex))}}
+ else if(G.phase==='move'){const mv=gMoves(G);if(bot||mv.length===1)LG.tm=setTimeout(()=>{if(LG.G===G&&G.ver===ver&&G.phase==='move')hMove(G.turn,bot?botPick(G,mv):mv[0])},f?5:((bot?750:1000)+ex));else if(!f)LG.tm=setTimeout(()=>{if(LG.G===G&&G.ver===ver&&G.phase==='move')hMove(G.turn,botPick(G,gMoves(G)))},LTURN*1000+ex)}
+ if(G.phase==='roll'&&!bot&&!f)LG.tm=setTimeout(()=>{if(LG.G===G&&G.ver===ver&&G.phase==='roll')hRoll(G.turn)},LTURN*1000+ex)}
 function lgEmo(seat,e,local){LG.emo[seat]=e;lgDraw();clearTimeout(LG['et'+seat]);LG['et'+seat]=setTimeout(()=>{delete LG.emo[seat];lgDraw()},2400);
  if(!local&&NET){if(LG.mode==='host')Object.values(NET.conns).forEach(c=>{try{c.send({t:'emo',seat,e})}catch(x){}})}
  else if(local&&NET&&LG.mode==='host')Object.values(NET.conns).forEach(c=>{try{c.send({t:'emo',seat,e})}catch(x){}})}
 function lgMe(){const q=lEq();return {name:state.name,cfg:myCfg(),tok:q.tok,dice:q.dice,bub:q.bub}}
 function lgStartLocal(stake){if(coins()<stake){toast(T('رصيد الذهب لا يكفي لهذه الطاولة','Not enough gold for this table'));return false}
- const me=Object.assign({type:'me'},lgMe());const pl=[me,...lBots().map(b=>Object.assign(b,{tok:LTOK[Math.random()*3|0].id,dice:'classic',bub:'plain'}))];
- LG.mode='local';LG.my=0;LG.stake=stake;LG.G=gNew(pl);LG.G.stake=stake;LG.paid=0;LG.settled=0;LG.emo={};LG.lastRoll='';LG.animVer=-1;NET=null;lgSettle();go('ludogame');return true}
+ const me=Object.assign({type:'me'},lgMe());const nn=state.lgN===2?2:4,bb=lBots().map(b=>Object.assign(b,{tok:'pawn',dice:'classic',bub:'plain'})),ghost=()=>({type:'none',name:'',cfg:avRand(),tok:'pawn',dice:'classic',bub:'plain'});const pl=nn===2?[me,ghost(),bb[0],ghost()]:[me,...bb];
+ LG.panel='';LG.mode='local';LG.my=0;LG.stake=stake;LG.G=gMode(gNew(pl),state.lgMode);LG.G.stake=stake;LG.paid=0;LG.settled=0;LG.emo={};LG.lastRoll='';LG.animVer=-1;NET=null;lgSettle();go('ludogame');return true}
 /* ---- online (PeerJS) ---- */
 function lgPeerLib(){return new Promise((res,rej)=>{if(window.Peer)return res(window.Peer);const s=document.createElement('script');s.src='https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js';s.onload=()=>window.Peer?res(window.Peer):rej(new Error('peer'));s.onerror=()=>rej(new Error('peer'));document.head.appendChild(s)})}
 async function lgMic(){if(NET.mic!==undefined)return;try{NET.mic=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true}});NET.voice=1}catch(e){NET.mic=null;NET.voice=0}}
@@ -1063,7 +1160,7 @@ async function lgHost(stake){if(coins()<stake)return toast(T('رصيد الذه�
  const peer=new P('wansa-ludo-'+code);NET.peer=peer;lgNetSetup(peer);
  peer.on('error',e=>toast(T('خطأ في الاتصال: ','Connection error: ')+(e.type||e)));
  peer.on('open',id=>{LG.mode='host';LG.my=0;LG.room=code;LG.stake=stake;const me=Object.assign({type:'me',pid:id},lgMe());
-  LG.G=gNew([me,...lBots()]);LG.G.stake=stake;LG.G.phase='lobby';LG.paid=0;LG.settled=0;LG.emo={};LG.lastRoll='';go('ludogame')});
+  LG.G=gMode(gNew([me,...lBots()]),state.lgMode);LG.G.stake=stake;LG.G.phase='lobby';LG.paid=0;LG.settled=0;LG.emo={};LG.lastRoll='';go('ludogame')});
  peer.on('connection',c=>{c.on('data',m=>lgHostMsg(c,m));c.on('close',()=>lgDrop(c))})}catch(e){toast(T('تعذر تحميل مكتبة الاتصال (تحتاج إنترنت)','Could not load the network library (needs internet)'))}}
 function lgHostMsg(c,m){const G=LG.G;if(!G)return;
  if(m.t==='hello'){if(G.phase!=='lobby')return c.send({t:'full'});let seat=G.players.findIndex((p,i)=>i>0&&p.type==='bot');if(seat<0)return c.send({t:'full'});
@@ -1083,23 +1180,39 @@ function lgGuestMsg(m,code,okf){if(m.t==='full'){toast(T('الغرفة ممتل�
  if(m.t==='welcome'){okf();LG.mode='guest';LG.my=m.seat;LG.room=code;LG.G=m.G;LG.stake=m.G.stake;LG.paid=0;LG.settled=0;LG.emo={};LG.lastRoll='';go('ludogame');lgCalls();return}
  if(m.t==='st'&&LG.mode==='guest'){LG.G=m.G;lgSettle();lgDraw();lgCalls()}
  if(m.t==='emo')lgEmo(m.seat,m.e,1)}
-function lgLeave(silent){clearTimeout(LG.tm);const G=LG.G;if(G&&G.phase!=='lobby'&&G.phase!=='over'&&!silent)toast(T('انسحبت — خسرت الرهان','You left — stake lost'));
+function lgLeave(silent){LG.panel='';clearTimeout(LG.tm);const G=LG.G;if(G&&G.phase!=='lobby'&&G.phase!=='over'&&!silent)toast(T('انسحبت — خسرت الرهان','You left — stake lost'));
  try{if(NET){if(NET.mic)NET.mic.getTracks().forEach(t=>t.stop());NET.peer&&NET.peer.destroy()}}catch(e){}document.querySelectorAll('audio[id^=au]').forEach(a=>a.remove());NET=null;LG.G=null;LG.mode='local';if(state.screen==='ludogame')go('back')}
 
+const ARTP=n=>'art/'+n+'.jpg';
 /* ===== late: Ludo — screens, store, wallet, actions ===== */
-state.lgStake=100;state.lgCat='dice';state.lgFil='all';
+state.lgStake=100;state.lgN=4;state.lgMode='classic';state.lgCat='dice';state.lgFil='all';
 const LREC=['ice','palm','gold','sunset','ruby','star','crown','neon','ocean'];
 const PK_C=[[500,'$0.99'],[1500,'$2.99'],[4000,'$6.99'],[10000,'$14.99']],PK_G=[[10,'$0.99'],[35,'$2.99'],[80,'$5.99'],[200,'$12.99']];
 const wchips=()=>`<span class="wch" data-go="wallet">🪙 <b>${coins().toLocaleString('en')}</b><i>+</i></span><span class="wch g" data-go="wallet">💎 <b>${gems()}</b><i>+</i></span>`;
 S.ludo=()=>{const st=lStats(),day=new Date().toDateString();let claimed=0;try{claimed=localStorage.getItem('wansaDaily')===day}catch(e){}
- return `<div class="scr ludo"><div class="hdr">${ibtn('back','back')}<h1>🎲 ${T('لودو ونسة','Wansa Ludo')}</h1><span style="display:flex;gap:6px">${wchips()}</span></div><div class="body">
- <div class="lhero"><div class="ld">${lDie(5,lEq().dice,78)}</div><div class="ld b">${lDie(3,'palm',56)}</div><div class="ld c">${lDie(6,'gold',50)}</div><h2>${T('٤ لاعبين · أونلاين · بالصوت','4 players · online · with voice')}</h2><p>${T('العب مع أصدقائك واتونسوا — الذهب للرهان، والماس للنرد والموضوعات','Play with friends — gold for stakes, gems for dice & themes')}</p></div>
- <div class="lsec">${T('رهان الطاولة (الدخول)','Table stake (entry)')}</div>${seg([50,100,500,1000].map(n=>[n,'🪙 '+n]),state.lgStake,'lgstake',1)}
- <div class="lbtns"><button class="cta" data-act="lgplay">🤖 ${T('العب ضد الكمبيوتر','Play vs computer')}</button><button class="cta gh" data-act="lghost">🌐 ${T('أنشئ غرفة أونلاين','Create online room')}</button>
- <div class="ljoin"><input id="lgcode" dir="ltr" maxlength="6" placeholder="${T('كود الغرفة','Room code')}" autocapitalize="characters"><button class="cta" data-act="lgjoin">${T('انضم','Join')}</button></div></div>
- <div class="lgrid2"><button class="lcard" data-go="ludostore"><span>🛍️</span><b>${T('المتجر','Store')}</b><small>${T('نرد · موضوعات · قطع','Dice · themes · tokens')}</small></button><button class="lcard" data-go="wallet"><span>💰</span><b>${T('شراء ذهب وماس','Get gold & gems')}</b><small>${T('باقات','Packs')}</small></button>
- <button class="lcard" data-act="lgdaily" ${claimed?'disabled':''}><span>🎁</span><b>${T('هدية يومية','Daily gift')}</b><small>${claimed?T('تم الاستلام اليوم','Claimed today'):'+50 🪙 +1 💎'}</small></button><button class="lcard"><span>📊</span><b>${T('إحصائياتك','Your stats')}</b><small>${st.w} ${T('فوز من','wins of')} ${st.p}</small></button></div>
+ const f=state.lgTag||'all',lv=lLevel();
+ const cards=[['classic','classic',T('كلاسيك','Classic'),T('القواعد التقليدية\nحتى 4 لاعبين','Traditional rules\nup to 4 players'),'lgmode','#2dbf6a',['all','pop','team']],
+ ['arrow','arrow',T('السهم','Arrow'),T('اخرج بـ 1 أو 6\nأونلاين أو كمبيوتر','Leave with 1 or 6\nonline or CPU'),'lgmode','#e8344f',['all','strat']],
+ ['master','master',T('ماستر','Master'),T('ابدأ بقطعة على اللوحة\nوتحدَّ الأصدقاء','Start with a piece on board\nchallenge friends'),'lgmode','#b04bd6',['all','prem','strat']],
+ ['quick','quick',T('سريع','Quick'),T('أول من يُدخل\nقطعتين يفوز','First to bring\n2 pieces home wins'),'lgmode','#2e9bff',['all','pop']],
+ ['store','store',T('المتجر','Store'),T('اشترِ نرد وموضوعات\nبالماس','Buy dice & themes\nwith gems'),'ludostore','#e04c8c',['all','prem']],
+ ['daily','daily',T('الهدايا اليومية','Daily gifts'),claimed?T('تم الاستلام اليوم','Claimed today'):T('سجّل دخولك\nواربح 🪙 💎','Check in\nand earn 🪙 💎'),'lgdaily','#e0a020',['all','pop']],
+ ['stats','stats',T('إحصائياتك','Your stats'),`${st.w} ${T('فوز من','wins of')} ${st.p}\n${T('تابع مستواك','Track your level')}`,'lgstats','#6a4be0',['all']],
+ ['friends','friends',T('الأصدقاء','Friends'),T('ادعُ أصدقاءك\nوالعب معهم','Invite friends\nand play together'),'lgfriends','#28b070',['all','team']]];
+ const tags=[['all',T('الكل','All'),'▦'],['pop',T('الأكثر شعبية','Popular'),'🔥'],['team',T('لعب جماعي','Multiplayer'),'👥'],['prem',T('مميز','Premium'),'👑'],['strat',T('استراتيجية','Strategy'),'🎯']];
+ return `<div class="scr ludo lobby"><div class="hdr">${ibtn('back','back')}<h1>🎮 ${T('محل اللعب','Game shop')}</h1><span style="display:flex;gap:6px">${wchips()}</span></div><div class="body">
+ <div class="lhb"><img src="${ARTP('hero')}" alt=""><div class="lht"><h2>${T('ألعاب ممتعة','Fun games')}</h2><h3>${T('في مكان واحد','in one place')}</h3><p>${T('حتى 4 لاعبين','Up to 4 players')}</p><button class="gob" data-act="lgmode" data-v="classic">🎮 ${T('ابدأ اللعب','Start playing')} <i>›</i></button></div></div>
+ <div class="lvl"><b>${T('المستوى','Level')} ${lv.l}</b><div class="bar"><u style="width:${Math.round(lv.cur/lv.need*100)}%"></u></div><small>${lv.cur}/${lv.need}</small></div><div class="ltags">${tags.map(([k,l,ic])=>`<button class="${f===k?'on':''}" data-act="lgtag" data-v="${k}"><span>${ic}</span>${l}</button>`).join('')}</div>
+ <div class="lcards">${cards.filter(x=>x[6].includes(f)).map(([k,img,n,d,act,col])=>`<button class="lc" style="--c:${col}" data-act="${act}" data-v="${k}" ${act==='lgdaily'&&claimed?'disabled':''}><img src="${ARTP(img)}" alt=""><span class="lct"><b>${n}</b><small>${d.replace(/\n/g,'<br>')}</small></span><i class="go">›</i></button>`).join('')}</div>
  <p class="lnote">${T('الذهب والماس عملات افتراضية داخل اللعبة ولا تُصرف نقدًا.','Gold & gems are virtual in-game currency with no cash value.')}</p></div>${nav('ludo')}</div>`};
+S.ludoentry=()=>{const m=LMODES.find(x=>x[0]===state.lgMode)||LMODES[0],st=state.lgStake,ix=LSTEPS.indexOf(st);
+ return `<div class="scr ludo">${hdr(m[1]+' '+m[2],{r:`<span style="display:flex;gap:6px">${wchips()}</span>`})}<div class="body"><div class="lhero sm"><div class="ld">${lDie(5,lEq().dice,70)}</div><h2>${m[2]}</h2><p>${m[3]}</p></div>
+ <div class="lsec">${T('عدد اللاعبين','Players')}</div><div class="seg fill" style="margin:0 14px"><button class="${state.lgN===2?'on':''}" data-act="lgn" data-v="2">⚔️ ${T('1 مقابل 1','1 vs 1')}</button><button class="${state.lgN!==2?'on':''}" data-act="lgn" data-v="4">👥 ${T('4 لاعبين','4 players')}</button></div><div class="lsec">${T('رسوم الدخول','Entry fee')}</div><div class="stp"><button data-act="lgstep" data-v="-1" ${ix<=0?'disabled':''}>−</button><div><b>🪙 ${st.toLocaleString('en')}</b><small>${T('الجائزة','Prize')}: 🪙 ${Math.round(st*(state.lgN===2?2:4)*.9).toLocaleString('en')}</small></div><button data-act="lgstep" data-v="1" ${ix>=LSTEPS.length-1?'disabled':''}>+</button></div>
+ <div class="lbtns"><button class="cta" data-act="lgplay">🤖 ${T('ابدأ ضد الكمبيوتر','Start vs computer')}</button><button class="cta gh" data-act="lghost">🌐 ${T('أنشئ غرفة أونلاين','Create online room')}</button>
+ <div class="ljoin"><input id="lgcode" dir="ltr" maxlength="6" placeholder="${T('كود الغرفة','Room code')}" autocapitalize="characters"><button class="cta" data-act="lgjoin">${T('انضم','Join')}</button></div></div></div>${nav('ludo')}</div>`};
+S.ludovs=()=>{const mm=LG.mm||{n:0,pl:[]},m=LMODES.find(x=>x[0]===state.lgMode)||LMODES[0];
+ return `<div class="scr full lgm vs"><div class="lgtop"><button class="ib glassy" data-act="lgmmx" aria-label="back">${ico('back')}</button><span class="lgpot">${m[1]} ${m[2]} · 🪙 ${state.lgStake}</span><span style="width:38px"></span></div>
+ <div class="vsbox"><h2>${mm.n>=(state.lgN===2?2:4)?T('جاهزون!','Ready!'):T('جاري البحث عن لاعبين...','Finding players...')}</h2><div class="vsgrid ${state.lgN===2?'two':''}">${(state.lgN===2?[0,1]:[0,1,2,3]).map(i=>{const p=mm.pl[i];return `<div class="vsp ${p?'in':''}" style="--sc:${LSEAT[i]}"><span class="lgav">${p?avSvg(p.cfg):'<i class="spn"></i>'}</span><b>${p?esc(p.name):'…'}</b></div>`}).join('')}</div><small>${T('الجائزة','Prize')}: 🪙 ${Math.round(state.lgStake*(state.lgN===2?2:4)*.9)}</small></div></div>`};
 S.wallet=()=>`<div class="scr ludo">${hdr(T('شراء الذهب والماس','Gold & gems'),{r:`<span style="display:flex;gap:6px">${wchips()}</span>`})}<div class="body"><div class="lnote warn">${T('وضع تجريبي: الشراء هنا يضيف الرصيد دون خصم أي مبلغ. للدفع الحقيقي يلزم ربط بوابة دفع (Google Play / Stripe) وسيرفر للتحقق.','Demo mode: purchases add balance without charging. Real payments need a payment provider (Google Play / Stripe) and a server to verify.')}</div>
  <div class="lsec">🪙 ${T('الذهب — للعب والرهان','Gold — for playing & stakes')}</div><div class="pk">${PK_C.map(([n,p],i)=>`<button data-act="lgpack" data-k="c" data-v="${i}"><span>🪙</span><b>${n.toLocaleString('en')}</b><em>${p}</em></button>`).join('')}</div>
  <div class="lsec">💎 ${T('الماس — للنرد والموضوعات','Gems — for dice & themes')}</div><div class="pk g">${PK_G.map(([n,p],i)=>`<button data-act="lgpack" data-k="g" data-v="${i}"><span>💎</span><b>${n}</b><em>${p}</em></button>`).join('')}</div>
@@ -1109,19 +1222,46 @@ function lCard(cat,it){const own=lOwned(cat,it),eq=lEq()[cat]===it.id;let pv='';
  else if(cat==='theme')pv=lMini(it.id,62);
  else if(cat==='tok')pv=`<svg viewBox="-12 -9 24 18" width="86" height="64">${[0,1,2,3].map(s=>`<g transform="translate(${-9+s*6},0) scale(.95)">${lTokG(it.id,s)}</g>`).join('')}</svg>`;
  else pv=`<span class="lgem" style="position:static;background:${it.bg};color:${it.fg};${it.bd?'border:1.5px solid '+it.bd:''}">😂 GG</span>`;
- return `<button class="stc ${it.prem?'prem':''} ${eq?'eq':''}" data-act="lgitem" data-k="${cat}" data-v="${it.id}"><span class="stt">${T(it.n[0],it.n[1])}</span><span class="stp">${pv}</span><span class="stb">${eq?'✓ '+T('مُجهّز','Equipped'):own?T('تجهيز','Equip'):'💎 '+it.g}</span></button>`}
+ return `<button class="stc ${it.prem?'prem':''} ${eq?'eq':''}" data-act="lgprev" data-k="${cat}" data-v="${it.id}"><span class="stt">${T(it.n[0],it.n[1])}</span><span class="stp">${pv}</span><span class="stb">${eq?'✓ '+T('مُجهّز','Equipped'):own?T('تجهيز','Equip'):'💎 '+it.g}</span></button>`}
 S.ludostore=()=>{const cats=[['dice','🎲',T('النرد','Dice')],['theme','🖼️',T('الموضوع','Theme')],['bub','💬',T('فقاعة الدردشة','Bubble')]],f=state.lgFil,c=state.lgCat;
  let items=LCAT[c].filter(it=>f==='all'||(f==='prem'&&it.prem)||(f==='rec'&&LREC.includes(it.id))||(f==='own'&&lOwned(c,it)));
  return `<div class="scr ludo">${hdr(T('متجر لودو','Ludo store'),{r:`<span style="display:flex;gap:6px">${wchips()}</span>`})}<div class="body"><div class="stabs">${cats.map(([k,e,n])=>`<button class="${c===k?'on':''}" data-act="lgcat" data-v="${k}"><span>${e}</span>${n}</button>`).join('')}</div>
  <div class="sfil">${[['all',T('الكل','All')],['rec',T('الموصى به','Recommended')],['prem',T('الفاخر','Premium')],['own',T('ما أملكه','Owned')]].map(([k,n])=>`<button class="${f===k?'on':''}" data-act="lgfil" data-v="${k}">${n}</button>`).join('')}</div>
- <div class="sgrid ${c==='theme'?'t3':''}">${items.map(it=>lCard(c,it)).join('')||`<p class="lnote">${T('لا عناصر','No items')}</p>`}</div></div></div>`};
+ <div class="sgrid ${c==='theme'?'t3':''}">${items.map(it=>lCard(c,it)).join('')||`<p class="lnote">${T('لا عناصر','No items')}</p>`}</div></div>${lPrevSheet()}</div>`};
+function lPrevSheet(){const p=state.lgPrev;if(!p)return '';const it=lItem(p.c,p.id),own=lOwned(p.c,it),eq=lEq()[p.c]===p.id;let big='';
+ if(p.c==='dice')big=`<div class="pvd"><div class="dh"><div class="cube pvc">${lCubeHTML(p.id).replace('<div class="cube">','').replace(/<\/div>$/,'')}</div></div></div>`;
+ else if(p.c==='theme')big=lMini(p.id,150);
+ else big=`<span class="lgem" style="position:static;background:${it.bg};color:${it.fg};${it.bd?'border:1.5px solid '+it.bd:''};font-size:26px;padding:10px 20px">😂 GG</span>`;
+ return `<div class="lgsheet pv" onclick="if(event.target===this)ACT.lgprevx({dataset:{v:''}})"><div class="sh"><h3>${T(it.n[0],it.n[1])}</h3><div class="pvbig">${big}</div><button class="cta" data-act="lgitem" data-k="${p.c}" data-v="${p.id}">${eq?'✓ '+T('مُجهّز','Equipped'):own?T('استخدم','Use'):'💎 '+it.g+' · '+T('اشترِ واستخدم','Buy & use')}</button><button class="cta gh" data-act="lgprevx">${T('إغلاق','Close')}</button></div></div>`}
+S.lprofile=()=>{const s=lStats(),lv=lLevel(),rate=s.p?Math.round(s.w/s.p*100):0,own=[...ownedSet()].length;
+ const ach=[['🥇',T('أول فوز','First win'),s.w>=1],['🔥',T('5 انتصارات','5 wins'),s.w>=5],['🎮',T('10 مباريات','10 games'),s.p>=10],['🏆',T('25 فوزاً','25 wins'),s.w>=25],['💰',T('ثروة: 1000 ذهب','Rich: 1000 gold'),coins()>=1000],['🛍️',T('جامع: 3 عناصر','Collector: 3 items'),own>=3]];
+ return `<div class="scr ludo">${hdr(T('ملفي في لودو','My Ludo profile'),{})}<div class="body"><div class="pfh"><span class="pfa">${avSvg(myCfg())}</span><h2>${esc(state.name)}</h2><b class="pfl">${T('المستوى','Level')} ${lv.l}</b><div class="lvl" style="margin:8px 0"><div class="bar"><u style="width:${Math.round(lv.cur/lv.need*100)}%"></u></div><small>${lv.cur}/${lv.need} XP</small></div><button class="cta gh" data-go="avatar" style="width:auto;padding:8px 18px">✏️ ${T('تعديل الشخصية','Edit avatar')}</button></div>
+ <div class="pfs"><div><b>${s.p}</b><small>${T('مباريات','Games')}</small></div><div><b>${s.w}</b><small>${T('فوز','Wins')}</small></div><div><b>${rate}%</b><small>${T('نسبة الفوز','Win rate')}</small></div></div>
+ <div class="lsec">${T('الإنجازات','Achievements')}</div><div class="ach">${ach.map(([ic,n,ok])=>`<div class="${ok?'ok':''}"><span>${ic}</span><small>${n}</small></div>`).join('')}</div></div>${nav('ludo')}</div>`};
 S.ludogame=()=>{const G=LG.G;if(!G)return S.ludo();
- return `<div class="scr full lgm"><div class="lgtop"><button class="ib glassy" data-act="lgleave" aria-label="leave">${ico('back')}</button><span class="lgpot">🪙 <b id="lgpot"></b></span><button class="ib glassy" data-act="lgmute" id="lgmute" aria-label="mic">${NET?(LG.muted?'🔇':'🎙️'):'🎲'}</button></div>
+ return `<div class="scr full lgm"><div class="lgtop"><button class="ib glassy" data-act="lgexit" aria-label="leave">${ico('back')}</button><span class="lgpot">🪙 <b id="lgpot"></b></span><button class="ib glassy" data-act="lgpanel" data-v="menu" aria-label="settings">⚙️</button></div>
  <div class="lgrow"><div class="lgcell" id="lgcell0"><div id="lgc0"></div><div class="lgdw" id="ldie0" data-act="lgroll" data-s="A"></div></div><div class="lgcell r" id="lgcell1"><div id="lgc1"></div><div class="lgdw" id="ldie1" data-act="lgroll"></div></div></div><div class="lgb" id="lgb"><div class="lgd" id="lgd"></div><svg id="lgsvg" viewBox="0 0 150 150"></svg></div><div class="lgrow"><div class="lgcell" id="lgcell3"><div id="lgc3"></div><div class="lgdw" id="ldie3" data-act="lgroll"></div></div><div class="lgcell r" id="lgcell2"><div id="lgc2"></div><div class="lgdw" id="ldie2" data-act="lgroll"></div></div></div>
- <div class="lgdock"><div id="lgmsg" class="lgmsg"></div><div class="emos">${['😂','😍','🔥','👏','😡','🥱','GG'].map(e=>`<button data-act="lgemo" data-v="${e}">${e}</button>`).join('')}</div></div><div id="lgov"></div></div>`};
+ <div class="lgdock"><div id="lgmsg" class="lgmsg"></div><div class="emos" id="lgemos" hidden>${['😂','😍','🔥','👏','😡','🥱','GG'].map(e=>`<button data-act="lgemo" data-v="${e}">${e}</button>`).join('')}</div><div class="pills"><button data-act="lgmute" id="lgmute">${NET?(LG.muted?'🔇':'🎙️'):'🎙️'}</button><button data-act="lgtogemo">😊</button><button data-act="lgpanel" data-v="chat">💬</button></div></div><div id="lgov"></div></div>`};
 Object.assign(ACT,{
- lgstake(t){state.lgStake=+t.dataset.v;render()},
- lgplay(){lgStartLocal(state.lgStake)},
+ lgtag(t){state.lgTag=t.dataset.v;render()},
+ lgstats(){go('lprofile')},
+ lgprev(t){state.lgPrev={c:t.dataset.k,id:t.dataset.v};render()},
+ lgprevx(){state.lgPrev=null;render()},
+ lgfriends(){state.lgMode='classic';go('ludoentry')},
+ lgn(t){state.lgN=+t.dataset.v;render()},
+ lgmode(t){state.lgMode=t.dataset.v;go('ludoentry')},
+ lgstep(t){const i=LSTEPS.indexOf(state.lgStake)+(+t.dataset.v);state.lgStake=LSTEPS[Math.max(0,Math.min(LSTEPS.length-1,i))];render()},
+ lgpanel(t){LG.panel=t.dataset.v||'';lgDraw()},
+ lgexit(){const G=LG.G;if(G&&G.phase!=='over'){LG.panel='exit';lgDraw()}else lgLeave()},
+ lgrules(){LG.panel='rules';lgDraw()},
+ lgopt(t){LG.opt[t.dataset.k]=LG.opt[t.dataset.k]?0:1;try{localStorage.setItem('wansaLgOpt',JSON.stringify(LG.opt))}catch(e){}LG.panel='menu';const o=$('#lgov');if(o)o.__p=null;lgDraw()},
+ lgtogemo(){const e=$('#lgemos');if(e)e.hidden=!e.hidden},
+ lgmmx(){LG.mm=null;go('back')},
+ 
+ lgplay(){if(coins()<state.lgStake){toast(T('رصيد الذهب لا يكفي لهذه الطاولة','Not enough gold for this table'));return}
+  const bots=lBots();LG.mm={n:1,pl:[Object.assign({type:'me'},lgMe())]};go('ludovs');const f=LG.fast?1:700;
+  (state.lgN===2?[0]:[0,1,2]).forEach(k=>setTimeout(()=>{if(state.screen!=='ludovs'||!LG.mm)return;LG.mm.pl.push(bots[k]);LG.mm.n++;render()},(k+1)*f+(k*250)));
+  setTimeout(()=>{if(state.screen==='ludovs'&&LG.mm){LG.mm=null;lgStartLocal(state.lgStake)}},(state.lgN===2?2:4)*f+900)},
  lghost(){lgHost(state.lgStake)},
  lgjoin(){lgJoin($('#lgcode')?.value)},
  lgroll(){const G=LG.G;if(!G||G.turn!==LG.my||G.phase!=='roll')return;if(LG.mode==='guest')NET.host.send({t:'roll'});else hRoll(LG.my)},
@@ -1134,12 +1274,171 @@ Object.assign(ACT,{
  lgcopy(){try{navigator.clipboard.writeText(LG.room)}catch(e){}toast(T('تم نسخ الكود','Code copied'))},
  lgcat(t){state.lgCat=t.dataset.v;state.lgFil='all';render()},
  lgfil(t){state.lgFil=t.dataset.v;render()},
- lgitem(t){const c=t.dataset.k,id=t.dataset.v,it=lItem(c,id);if(lOwned(c,it)){lSetEq(c,id);toast(T('تم التجهيز','Equipped'));return render()}
+ lgitem(t){state.lgPrev=null;const c=t.dataset.k,id=t.dataset.v,it=lItem(c,id);if(lOwned(c,it)){lSetEq(c,id);toast(T('تم التجهيز','Equipped'));return render()}
   const r=lBuy(c,id);if(r==='poor')return toast(T('الماس لا يكفي — اشحن من المتجر 💎','Not enough gems — top up 💎'));lSetEq(c,id);toast(T('تم الشراء والتجهيز ✓','Bought & equipped ✓'));render()},
  lgpack(t){const k=t.dataset.k,i=+t.dataset.v;if(k==='c'){setCoins(coins()+PK_C[i][0])}else setGems(gems()+PK_G[i][0]);toast(T('تمت الإضافة (تجريبي — بدون دفع)','Added (demo — no charge)'));render()},
  lgexch(){if(gems()<5)return toast(T('الماس لا يكفي','Not enough gems'));setGems(gems()-5);setCoins(coins()+600);toast(T('تم الاستبدال','Exchanged'));render()},
  lgdaily(){const d=new Date().toDateString();try{if(localStorage.getItem('wansaDaily')===d)return;localStorage.setItem('wansaDaily',d)}catch(e){}setCoins(coins()+50);setGems(gems()+1);toast('+50 🪙 +1 💎');render()}
 });
 const _afterL=after;after=function(sc){_afterL(sc);if(sc==='ludogame'){if(!LG.G)go('ludo');else lgMount()}};
+
+/* ===== Jota (جوطه) — smart assistant ===== */
+const JCO=[['SD','السودان','Sudan','SDG'],['EG','مصر','Egypt','EGP'],['SA','السعودية','Saudi Arabia','SAR'],['AE','الإمارات','UAE','AED'],['QA','قطر','Qatar','QAR'],['KW','الكويت','Kuwait','KWD'],['BH','البحرين','Bahrain','BHD'],['OM','عُمان','Oman','OMR'],['JO','الأردن','Jordan','JOD'],['LB','لبنان','Lebanon','LBP'],['SY','سوريا','Syria','SYP'],['IQ','العراق','Iraq','IQD'],['YE','اليمن','Yemen','YER'],['LY','ليبيا','Libya','LYD'],['TN','تونس','Tunisia','TND'],['DZ','الجزائر','Algeria','DZD'],['MA','المغرب','Morocco','MAD'],['PS','فلسطين','Palestine','ILS'],['SO','الصومال','Somalia','SOS'],['TR','تركيا','Turkey','TRY'],['US','أمريكا','USA','USD'],['GB','بريطانيا','UK','GBP'],['IN','الهند','India','INR'],['PK','باكستان','Pakistan','PKR']];
+const JTZ={'Africa/Khartoum':'SD','Africa/Cairo':'EG','Asia/Riyadh':'SA','Asia/Dubai':'AE','Asia/Qatar':'QA','Asia/Kuwait':'KW','Asia/Bahrain':'BH','Asia/Muscat':'OM','Asia/Amman':'JO','Asia/Beirut':'LB','Asia/Damascus':'SY','Asia/Baghdad':'IQ','Asia/Aden':'YE','Africa/Tripoli':'LY','Africa/Tunis':'TN','Africa/Algiers':'DZ','Africa/Casablanca':'MA','Asia/Gaza':'PS','Asia/Hebron':'PS','Africa/Mogadishu':'SO','Europe/Istanbul':'TR','Europe/London':'GB','Asia/Karachi':'PK','Asia/Kolkata':'IN','America/New_York':'US','America/Chicago':'US','America/Los_Angeles':'US'};
+function jCountry(){let c=''; try{c=localStorage.getItem('wansaCountry')||''}catch(e){}
+ if(!c){try{c=JTZ[Intl.DateTimeFormat().resolvedOptions().timeZone]||''}catch(e){}}
+ if(!c){const m=(navigator.language||'').match(/-([A-Z]{2})$/);if(m)c=m[1]}
+ return JCO.find(x=>x[0]===c)||null}
+const JK='wansaJota',JAPI='wansaJotaApi',JTOK='wansaJotaTok';const lsg=k=>{try{return localStorage.getItem(k)||''}catch(e){return''}};
+const jLoad=()=>{try{return JSON.parse(localStorage.getItem(JK))||[]}catch(e){return[]}};
+const jSave=()=>{jEnsure();jcSave()};
+const JC='wansaJotaConvs';
+const jcLoad=()=>{try{return JSON.parse(localStorage.getItem(JC))||[]}catch(e){return[]}};
+state.jconvs=jcLoad();
+if(!state.jconvs.length){const old=jLoad();if(old.length)state.jconvs=[{id:'c'+Date.now(),title:'',ts:Date.now(),msgs:old}]}
+state.jcur=state.jconvs.length?state.jconvs[0].id:null;
+state.jota=state.jcur?state.jconvs[0].msgs:[];state.jotaBusy=0;state.jdr=0;state.jq='';
+const jcSave=()=>{try{localStorage.setItem(JC,JSON.stringify(state.jconvs.slice(0,40).map(c=>({id:c.id,title:c.title,ts:c.ts,msgs:c.msgs.slice(-60).map(m=>({r:m.r,t:m.t,a:m.a}))}))))}catch(e){}};
+function jEnsure(){let c=state.jconvs.find(x=>x.id===state.jcur);if(!c){c={id:'c'+Date.now(),title:'',ts:Date.now(),msgs:state.jota};state.jconvs.unshift(c);state.jcur=c.id}else c.msgs=state.jota;
+ if(!c.title){const f=state.jota.find(m=>m.r==='me');if(f)c.title=f.t.slice(0,32)}c.ts=Date.now();const i=state.jconvs.indexOf(c);if(i>0){state.jconvs.splice(i,1);state.jconvs.unshift(c)}}
+
+const jOrb=(s=40)=>`<span class="jorb" style="width:${s}px;height:${s}px"><i>✦</i></span>`;
+const JCHIPS=[];
+
+state.jAtt=[];state.jSpeak=0;state.jsub=0;state.jmode='';state.jvs=0;state.jvt='f';
+const JOV=[['marin','مارين','Marin','واضحة وطبيعية — أفضل جودة','Clear & natural — best quality','f','#ff8fb1'],['coral','كورال','Coral','دافئة ومبتسمة','Warm & smiling','f','#ffb36b'],['nova','نوفا','Nova','حيوية وسريعة','Lively & bright','f','#b985ff'],['sage','سيج','Sage','هادئة ومتزنة','Calm & composed','f','#7ee0b5'],['shimmer','شيمر','Shimmer','ناعمة ورقيقة','Soft & gentle','f','#7ec8ff'],['alloy','آلوي','Alloy','متوازنة ومحايدة','Balanced & neutral','f','#f2d16b'],
+ ['cedar','سيدار','Cedar','رزين — أفضل جودة','Steady — best quality','m','#4ab58f'],['onyx','أونكس','Onyx','عميق وقوي','Deep & strong','m','#7a8cff'],['echo','إيكو','Echo','واضح ومباشر','Clear & direct','m','#5fd1e8'],['ash','آش','Ash','ودود وبسيط','Friendly & easy','m','#ff9a5f'],['verse','فيرس','Verse','معبّر ومتحمس','Expressive & upbeat','m','#e46bd6'],['ballad','باليد','Ballad','حالم وحكّاء','Dreamy storyteller','m','#9aa8ff'],['fable','فيبل','Fable','أنيق بلكنة بريطانية','Elegant, British accent','m','#d9b45a']];
+
+const JV={rec:null,hands:0,ptt:0,armed:0,voiceQ:0,busy:0};
+const jSR=()=>window.SpeechRecognition||window.webkitSpeechRecognition;
+S.jota=()=>{const m=state.jota;
+ return `<div class="scr jota"><div class="hdr"><button class="ib" data-go="back" aria-label="back">${ico('back')}</button><div class="jt">${jOrb(38)}<span><b>${T('جوطه','Jota')}</b><small id="jstat">${jStatTxt()}</small></span></div><span style="display:flex"><button class="ib" data-act="jmenu" aria-label="menu">${ico('menu')}</button></span></div>
+ <div class="jmsgs" id="jmsgs">${m.length?m.map(jBub).join(''):jWelcome()}${state.jotaBusy?'<div class="jb bot"><span class="jdots"><i></i><i></i><i></i></span></div>':''}</div>
+ ${state.jAtt.length?`<div class="jatt">${state.jAtt.map((a,i)=>`<span class="ja">${a.th?`<img src="${a.th}" alt="">`:`<i>${a.kind==='pdf'?'📕':'📄'}</i>`}<b>${esc(a.name)}</b><button data-act="jatx" data-i="${i}" aria-label="remove">×</button></span>`).join('')}</div>`:''}
+ ${state.jmode==='study'?`<div class="jmode"><span>📝 ${T('وضع غششني مفعّل','Study mode on')}</span><button data-act="jstudyx">×</button></div>`:''}
+ ${state.jsub?`<div class="jchips sub"><button data-act="jnl">📍 ${T('شمارات محلية','Local news')}</button><button data-act="jng">🌍 ${T('شمارات عالمية','World news')}</button></div>`:''}
+ <div class="jchips"><button class="${state.jsub?'on':''}" data-act="jnews">📰 ${T('شمارات اليوم','Today\'s news')}</button><button class="${state.jmode==='study'?'on':''}" data-act="jstudy">📝 ${T('غششني..','Help me study..')}</button><button data-act="jrate">💱 ${T('ما يغشوك..','Rates..')}</button><button data-act="jfree">💬 ${T('قاطع موضوع','Off-topic chat')}</button></div>
+ <div class="bar jbar"><button class="ib" data-act="jattach" aria-label="attach" style="width:34px">${ico('clip')}</button><input id="jIn" dir="auto" placeholder="${T('أها ارغي...','Go on, talk...')}" autocomplete="off"><button class="ib jmic ${JV.ptt?'rec':''}" data-act="jmic" aria-label="mic">${ico('mic')}</button><button class="mic" data-act="jsend" aria-label="send">${ico('send')}</button></div>${state.jdr?jDrawer():''}${state.jset?jSet():''}${state.jvs?jPicker():''}</div>`};
+const jStatTxt=()=>state.jmode==='study'&&!JV.ptt&&!JV.hands?T('📝 وضع غششني','📝 Study mode'):JV.ptt?T('🎙️ أسمعك...','🎙️ Listening...'):JV.armed&&Date.now()<JV.armed?T('✨ تفضل، أنا أسمعك','✨ Go ahead, I\'m listening'):JV.hands?T('👂 قُل «جوطه» ثم سؤالك','👂 Say "Jota" then your question'):T('مساعدك الذكي','Your smart assistant');
+const jStat=()=>{const e=$('#jstat');if(e)e.textContent=jStatTxt()};
+const jWelcome=()=>`<div class="jwel">${jOrb(84)}<h2>${T('أهلاً، أنا جوطه','Hi, I\'m Jota')}</h2><p>${T('كورك لي بس بتلقاني جنبك أكتر من ضلك، إنت قول يا جوطااااااو وبديك الزيت بدون فلسفة وسواقة','Just look - you\'ll find me closer than your own shadow. Call out "Jotaaaa" and I\'ll give you the goods, no philosophy, no nagging')}</p></div>`;
+const jBub=m=>`<div class="jb ${m.r}">${m.r==='bot'?jOrb(26):''}<span class="jt2">${(m.a||[]).map(a=>a.th?`<img class="jim" src="${a.th}" alt="">`:`<span class="jf">${a.kind==='pdf'?'📕':a.kind==='video'?'🎞️':'📄'} ${esc(a.name)}</span>`).join('')}${esc(m.t).replace(/\n/g,'<br>')}</span></div>`;
+function jVoiceUI(){const P=jVP(),cur=JOV.find(v=>v[0]===P.ov)||JOV[0];return `<div class="lsec" style="padding:6px 0 0">${T('صوت جوطه','Jota\'s voice')}</div><button class="jvrow" data-act="jvopen"><span class="jvo" style="--c:${cur[6]}">🎙️</span><span><b>${P.nat&&lsg(JAPI)?T(cur[1],cur[2]):T('صوت الجهاز','Device voice')}</b><small>${P.nat&&lsg(JAPI)?T(cur[3],cur[4]):T('بدون خادم الصوت','No voice server')}</small></span><em>›</em></button>`}
+function jPicker(){const P=jVP(),tab=state.jvt,list=JOV.filter(v=>v[5]===tab),hasApi=!!lsg(JAPI);
+ return `<div class="jvs"><div class="jvh"><button class="ib" data-act="jvclose" aria-label="back">${ico('back')}</button><h2>${T('أصوات جوطه','Jota voices')}</h2><span style="width:44px"></span></div>
+ <div class="jvt"><label class="jtog"><span><b>${T('الصوت الطبيعي','Natural voice')}</b><small>${hasApi?T('أصوات OpenAI عبر خادمك','OpenAI voices via your server'):T('يحتاج ربط الخادم من الإعدادات','Needs the server (Settings)')}</small></span><i class="tg ${P.nat&&hasApi?'on':''}" data-act="jvnat"></i></label></div>
+ <div class="seg fill" style="margin:6px 16px"><button class="${tab==='f'?'on':''}" data-act="jvtab" data-v="f">♀ ${T('نساء','Women')}</button><button class="${tab==='m'?'on':''}" data-act="jvtab" data-v="m">♂ ${T('رجال','Men')}</button></div>
+ <div class="jvg">${list.map(v=>`<div class="jvc ${P.ov===v[0]?'on':''}" style="--c:${v[6]}" data-act="jvpick" data-v="${v[0]}"><span class="jvo"><i>${v[0][0].toUpperCase()}</i></span><b>${T(v[1],v[2])}</b><small>${T(v[3],v[4])}</small><button class="jvp" data-act="jvprev" data-v="${v[0]}" aria-label="play">▶</button>${P.ov===v[0]?'<em>✓</em>':''}</div>`).join('')}</div>
+ <p class="jvn">${T('الأصوات مولّدة بالذكاء الاصطناعي وليست صوت إنسان. هي محسّنة للإنجليزية وبتنطق العربي بلكنة قد تختلف بين صوت وآخر. التسمية رجال/نساء حسب انطباع الصوت.','Voices are AI-generated, not human. They are optimized for English; Arabic accent may vary. Men/Women labels reflect how the voice sounds.')}</p></div>`}
+
+const jDate=ts=>new Date(ts).toLocaleDateString(state.lang==='en'?'en':'ar',{day:'numeric',month:'short'});
+function jDrawer(){const q=jNorm(state.jq||''),cs=state.jconvs.filter(c=>c.title&&(!q||jNorm(c.title).includes(q)));
+ return `<div class="jdr" onclick="if(event.target===this)ACT.jmenux({dataset:{v:''}})"><div class="jdp"><h3>${T('جوطه','Jota')}</h3><button class="jnew" data-act="jnew">✚ ${T('محادثة جديدة','New chat')}</button><input class="jsr" id="jSr" dir="auto" placeholder="${T('بحث في المحادثات','Search chats')}" value="${esc(state.jq||'')}" oninput="state.jq=this.value;jDrawRefresh()"><div class="jlist" id="jlist">${jListHTML(cs)}</div>
+ <div class="jtools"><button data-act="jhands"><span>👂</span><b>${T('النداء بـ«جوطه»','Wake word')}</b><i class="tg ${JV.hands?'on':''}"></i></button><button data-act="jspk"><span>${state.jSpeak?'🔊':'🔇'}</span><b>${T('قراءة الردود','Read replies')}</b><i class="tg ${state.jSpeak?'on':''}"></i></button><button data-act="jset"><span>⚙️</span><b>${T('الإعدادات','Settings')}</b></button><button data-act="jclr"><span>🗑️</span><b>${T('مسح هذه المحادثة','Clear this chat')}</b></button></div></div></div>`}
+const jListHTML=cs=>cs.length?`<div class="lsec" style="padding:6px 4px">${T('المحادثات السابقة','Previous chats')}</div>`+cs.map(c=>`<div class="jc ${c.id===state.jcur?'on':''}"><button class="o" data-act="jopen" data-id="${c.id}">${esc(c.title)}<small>${jDate(c.ts)}</small></button><button class="x" data-act="jdel" data-id="${c.id}" aria-label="delete">×</button></div>`).join(''):`<p style="color:var(--mute);font-size:12.5px;padding:8px 4px">${T('لا توجد محادثات سابقة','No previous chats')}</p>`;
+function jDrawRefresh(){const q=jNorm(state.jq||''),e=$('#jlist');if(e)e.innerHTML=jListHTML(state.jconvs.filter(c=>c.title&&(!q||jNorm(c.title).includes(q))))}
+function jCountryUI(){const c=jCountry();return `<div class="lsec" style="padding:6px 0 0">${T('بلدك (للأخبار وسعر العملة)','Your country (news & rates)')}</div><select class="jinp" onchange="try{localStorage.setItem('wansaCountry',this.value)}catch(e){}"><option value="">${T('تلقائي','Auto')}${c?' — '+(state.lang==='en'?c[2]:c[1]):''}</option>${JCO.map(x=>`<option value="${x[0]}" ${lsg('wansaCountry')===x[0]?'selected':''}>${state.lang==='en'?x[2]:x[1]}</option>`).join('')}</select>`}
+function jSet(){return `<div class="lgsheet" onclick="if(event.target===this)ACT.jsetx({dataset:{v:''}})" style="position:absolute;z-index:30"><div class="sh"><h3>${T('ربط جوطه بالخادم','Connect Jota to a server')}</h3><p style="font-size:12.5px;color:var(--mute);line-height:1.7;margin:0">${T('الصق رابط الخادم (Cloudflare Worker) والرمز السري. بدونهما تعمل جوطه بقدرات محلية محدودة ولا تحلل الملفات.','Paste your server URL (Cloudflare Worker) and secret token. Without them Jota runs with limited local skills and can\'t analyze files.')}</p><input id="jApi" dir="ltr" placeholder="https://jota.your-name.workers.dev" value="${esc(lsg(JAPI))}" class="jinp"><input id="jTok" dir="ltr" type="password" placeholder="${T('الرمز السري (JOTA_TOKEN)','Secret token (JOTA_TOKEN)')}" value="${esc(lsg(JTOK))}" class="jinp">${jCountryUI()}${jVoiceUI()}<button class="cta" data-act="jsave">${T('حفظ','Save')}</button><button class="cta gh" data-act="jtest">${T('اختبار الاتصال','Test connection')}</button><button class="cta gh" data-act="jsetx">${T('إغلاق','Close')}</button></div></div>`}
+function jCalc(q){const m=q.replace(/[×x✕]/gi,'*').replace(/÷/g,'/').replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).match(/[\d.()+\-*/%\s^]{3,}/);if(!m)return null;const e=m[0].replace(/\^/g,'**').trim();if(!/\d/.test(e)||!/[+\-*/%]/.test(e))return null;try{const v=Function('"use strict";return ('+e+')')();if(typeof v==='number'&&isFinite(v))return `${e.replace(/\*\*/g,'^')} = ${+v.toFixed(8)}`}catch(x){}return null}
+function jLocal(q){const s=q.trim(),l=s.toLowerCase();
+ if(s==='sum'||/لخص|ملخص|summar|unread/.test(l)){const u=CH.filter(c=>c.un);if(!u.length)return T('لا توجد رسائل غير مقروءة 🎉','No unread messages 🎉');return T('عندك رسائل جديدة:\n','You have new messages:\n')+u.map(c=>`• ${c.n} (${c.un}): ${T(c.pv[0],c.pv[1])}`).join('\n')}
+ if(s==='rep'||/اقترح|رد|reply/.test(l)){const c=CH.find(x=>x.un)||CH[0];return T(`آخر رسالة من ${c.n}: «${c.pv[0]}»\nاقتراحات:\n• تمام، شكراً 🙏\n• أكيد، بعد قليل\n• تحدث معك لاحقاً`,`Last message from ${c.n}: "${c.pv[1]}"\nSuggestions:\n• Sounds good, thanks 🙏\n• Sure, in a bit\n• Talk to you later`)}
+ if(s==='time'||/الساعة|الوقت|time/.test(l)){const d=new Date();return T('الساعة الآن ','It is ')+d.toLocaleTimeString(state.lang==='ar'?'ar':'en',{hour:'2-digit',minute:'2-digit'})+' — '+d.toLocaleDateString(state.lang==='ar'?'ar':'en',{weekday:'long',day:'numeric',month:'long'})}
+ const c=jCalc(s);if(c)return c;
+ if(s==='dice'||/نرد|dice/.test(l)){const v=1+Math.random()*6|0;return '🎲 '+v}
+ if(/عملة|coin|flip/.test(l))return Math.random()<.5?T('🪙 صورة','🪙 Heads'):T('🪙 كتابة','🪙 Tails');
+ if(s==='joke'||/نكتة|نكته|joke/.test(l)){const J=[T('قال واحد لصاحبه: عندي أخبار حلوة وأخبار وحشة. الحلوة إني نجحت... والوحشة إني ما أعرف في إيه!','A programmer was told to go to the store: "get milk, and if they have eggs, get six." He came back with six milks.'),T('ليه الكمبيوتر ما بيبرد؟ لأن عنده ويندوز مفتوحة!','Why do programmers prefer dark mode? Because light attracts bugs.'),T('مرة واحد نسي كلمة السر... فكتب "نسيتها" وكانت هي كلمة السر!','I told my phone I needed space. It opened the gallery.')];return J[Math.random()*J.length|0]}
+ if(/^(مرحبا|اهلا|أهلا|هلا|السلام|hi|hello|hey)/.test(l))return T('أهلاً بك! كيف أساعدك؟ 😊','Hello! How can I help? 😊');
+ if(/شكرا|شكراً|thank/.test(l))return T('العفو! 🌟','You\'re welcome! 🌟');
+ if(/من انت|مين انت|who are you|اسمك/.test(l))return T('أنا جوطه، مساعد ونسة الذكي ✨','I\'m Jota, WANSA\'s smart assistant ✨');
+ return null}
+
+/* ---- attachments ---- */
+const jB64=(blobOrCanvas,type='image/jpeg',q=.82)=>new Promise(res=>{if(blobOrCanvas.toDataURL)return res(blobOrCanvas.toDataURL(type,q).split(',')[1]);const r=new FileReader();r.onload=()=>res(String(r.result).split(',')[1]);r.readAsDataURL(blobOrCanvas)});
+function jFit(src,w,h,max){const sc=Math.min(1,max/Math.max(w,h)),c=document.createElement('canvas');c.width=Math.round(w*sc);c.height=Math.round(h*sc);c.getContext('2d').drawImage(src,0,0,c.width,c.height);return c}
+function jLoadImg(f){return new Promise((res,rej)=>{const u=URL.createObjectURL(f),im=new Image();im.onload=()=>{res(im);setTimeout(()=>URL.revokeObjectURL(u),3000)};im.onerror=()=>rej(new Error('img'));im.src=u})}
+function jFrames(f,n=6){return new Promise((res,rej)=>{const u=URL.createObjectURL(f),v=document.createElement('video');v.muted=true;v.playsInline=true;v.preload='auto';v.src=u;const out=[];let dur=0;
+ const fail=()=>{URL.revokeObjectURL(u);rej(new Error('video'))};v.onerror=fail;
+ v.onloadedmetadata=()=>{dur=v.duration;if(!isFinite(dur)||dur<=0){dur=1}let i=0;const next=()=>{if(i>=n){URL.revokeObjectURL(u);return res({frames:out,dur})}v.currentTime=Math.min(dur-.05,Math.max(0,(i+.5)*dur/n))};
+  v.onseeked=()=>{try{out.push(jFit(v,v.videoWidth||640,v.videoHeight||360,768))}catch(e){return fail()}i++;next()};next()}})}
+async function jAddFile(f){const nm=f.name||'file',ty=f.type||'';
+ try{
+  if(ty.startsWith('image/')){const im=await jLoadImg(f),c=jFit(im,im.naturalWidth,im.naturalHeight,1280),th=jFit(im,im.naturalWidth,im.naturalHeight,96).toDataURL('image/jpeg',.7);state.jAtt.push({kind:'image',name:nm,th,payload:[{type:'image',media_type:'image/jpeg',data:await jB64(c)}]})}
+  else if(ty.startsWith('video/')){toast(T('جاري تجهيز الفيديو...','Preparing video...'));const {frames,dur}=await jFrames(f);const pl=[{type:'note',text:`The next ${frames.length} images are still frames sampled evenly across a ${dur.toFixed(1)}s video named "${nm}" (in order).`}];for(const c of frames)pl.push({type:'image',media_type:'image/jpeg',data:await jB64(c,'image/jpeg',.78)});state.jAtt.push({kind:'video',name:nm,th:frames[0].toDataURL('image/jpeg',.5),payload:pl})}
+  else if(ty==='application/pdf'||/\.pdf$/i.test(nm)){if(f.size>12*1048576)return toast(T('الملف كبير (أقصى 12MB)','File too large (max 12MB)'));state.jAtt.push({kind:'pdf',name:nm,payload:[{type:'pdf',data:await jB64(f)}]})}
+  else if(ty.startsWith('text/')||/\.(txt|md|csv|json|xml|html|css|js|ts|py|java|c|cpp|cs|go|rs|sql|log|yml|yaml|ini|tsv)$/i.test(nm)){if(f.size>1048576)return toast(T('الملف النصي كبير (أقصى 1MB)','Text file too large (max 1MB)'));state.jAtt.push({kind:'text',name:nm,payload:[{type:'text',name:nm,text:await f.text()}]})}
+  else return toast(T('نوع الملف غير مدعوم (صور، فيديو، PDF، ملفات نصية)','Unsupported file (images, video, PDF, text files)'))
+ }catch(e){toast(T('تعذّر قراءة الملف','Could not read file'))}}
+/* ---- voice ---- */
+const JVK='wansaJotaVoice';const jVP=()=>{try{return Object.assign({g:'f',name:'',ov:'marin',nat:1},JSON.parse(localStorage.getItem(JVK)))}catch(e){return{g:'f',name:'',ov:'marin',nat:1}}};
+const jVPset=o=>{try{localStorage.setItem(JVK,JSON.stringify(Object.assign(jVP(),o)))}catch(e){}};
+const jGender=v=>{const n=v.name||'';if(/female|woman|hoda|salma|zariyah|laila|zira|samantha|susan|hazel|karen|victoria|moira|aria|jenny|sara|amira|noura|nora|google us english|google العربية|fiona|tessa|ava/i.test(n))return'f';if(/\bmale\b|naayf|hamed|maged|majed|tarik|shakir|david|mark|george|james|daniel|alex|fred|guy|ryan|ahmed|omar|youssef|tom|oliver/i.test(n))return'm';return'?'};
+const jVoices=()=>{try{const L=jLang().slice(0,2);return speechSynthesis.getVoices().filter(v=>v.lang&&v.lang.toLowerCase().startsWith(L))}catch(e){return[]}};
+const jLang=()=>state.lang==='en'?'en-US':'ar-SA';
+const jNorm=t=>String(t).toLowerCase().replace(/[\u064B-\u065F\u0670]/g,'').replace(/[أإآ]/g,'ا').replace(/ة/g,'ه').replace(/ى/g,'ي');
+const JWAKE=/(?:يا\s+|hey\s+|hi\s+|ok\s+)?(جوطه|جوته|جوتا|جوطا|خوطه|جوت|jota|yota|hota|jotta)/i;
+function jStopRec(){const r=JV.rec;JV.rec=null;if(r){r.onend=null;r.onresult=null;r.onerror=null;try{r.abort()}catch(e){}}}
+function jStartRec(mode){const SR=jSR();if(!SR){toast(T('متصفحك لا يدعم التعرّف على الصوت (استخدم Chrome أو Edge أو متصفح أندرويد)','Speech recognition not supported in this browser (use Chrome/Edge/Android)'));return false}
+ jStopRec();const r=new SR();JV.rec=r;r.lang=jLang();r.continuous=mode==='hands';r.interimResults=mode==='ptt';
+ r.onresult=e=>{let fin='',itm='';for(let i=e.resultIndex;i<e.results.length;i++){const x=e.results[i];(x.isFinal?(fin+=x[0].transcript):(itm+=x[0].transcript))}
+  if(mode==='ptt'){const inp=$('#jIn');if(inp&&itm)inp.value=itm;if(fin){JV.ptt=0;jStopRec();const inp2=$('#jIn');if(inp2)inp2.value='';jAsk(fin.trim(),null,1)}}
+  else if(fin)jHeard(fin.trim())};
+ r.onerror=e=>{if(e.error==='not-allowed'||e.error==='service-not-allowed'){JV.hands=0;JV.ptt=0;toast(T('اسمح باستخدام الميكروفون من إعدادات المتصفح','Allow microphone access in your browser settings'));render()}};
+ r.onend=()=>{if(JV.rec!==r)return;JV.rec=null;if(mode==='ptt'){JV.ptt=0;render();return}if(JV.hands&&state.screen==='jota'&&!JV.busy)setTimeout(()=>{if(JV.hands&&!JV.rec&&state.screen==='jota')jStartRec('hands')},250)};
+ try{r.start()}catch(e){return false}return true}
+function jHeard(txt){const n=jNorm(txt),m=n.match(JWAKE);
+ if(JV.armed&&Date.now()<JV.armed&&!m){JV.armed=0;jStat();return jAsk(txt,null,1)}
+ if(!m)return;const q=txt.slice(0).replace(new RegExp('^.*?'+m[1].replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'),'').replace(/^[\s,،.!؟?:-]+/,'').trim();
+ if(q.length>1)jAsk(q,null,1);else{JV.armed=Date.now()+8000;jStat();try{navigator.vibrate&&navigator.vibrate(40)}catch(e){}setTimeout(jStat,8100)}}
+let jAudio=null;const jPrevCache={};
+async function jTts(text,voice){const api=lsg(JAPI),tok=lsg(JTOK);const r=await fetch(api,{method:'POST',headers:Object.assign({'Content-Type':'application/json'},tok?{Authorization:'Bearer '+tok}:{}),body:JSON.stringify({op:'tts',text,voice})});if(!r.ok)throw new Error('tts '+r.status);return await r.blob()}
+function jStopAudio(){try{if(jAudio){jAudio.pause();jAudio=null}}catch(e){}}
+async function jSayNat(t,voice,cacheKey){try{jStopAudio();let blob=cacheKey&&jPrevCache[cacheKey];if(!blob){blob=await jTts(String(t).replace(/[*_`#>]/g,'').slice(0,1200),voice);if(cacheKey)jPrevCache[cacheKey]=blob}
+ const a=new Audio(URL.createObjectURL(blob));jAudio=a;JV.busy=1;if(JV.hands)jStopRec();const end=()=>{JV.busy=0;if(JV.hands&&state.screen==='jota'&&!JV.rec)setTimeout(()=>jStartRec('hands'),200)};a.onended=end;a.onerror=end;await a.play();return true}catch(e){JV.busy=0;return false}}
+function jSay(t){const P=jVP();if(P.nat&&lsg(JAPI)){jSayNat(t,P.ov).then(ok=>{if(!ok)jSayDev(t)});return}jSayDev(t)}
+function jSayDev(t){if(!window.speechSynthesis)return;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(String(t).replace(/[*_`#>]/g,'').replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu,'')),L=jLang();u.lang=L;const P=jVP(),vs=jVoices();let v=vs.find(x=>x.name===P.name)||vs.find(x=>jGender(x)===P.g)||vs[0];if(v)u.voice=v;const g=v?jGender(v):'?';u.pitch=g===P.g?1:(P.g==='m'?.7:1.25);u.rate=P.g==='m'?.95:1;JV.busy=1;if(JV.hands)jStopRec();u.onend=u.onerror=()=>{JV.busy=0;if(JV.hands&&state.screen==='jota'&&!JV.rec)setTimeout(()=>jStartRec('hands'),200)};speechSynthesis.speak(u)}catch(e){JV.busy=0}}
+async function jAsk(q,lab,voice,opt){opt=opt||{};const mode=opt.mode||state.jmode||'chat',co=jCountry();const att=state.jAtt.slice();state.jAtt=[];
+ state.jota.push({r:'me',t:lab||q,a:att.map(a=>({kind:a.kind,name:a.name,th:a.kind==='image'||a.kind==='video'?a.th:''}))});state.jotaBusy=1;jSave();render();jScroll();
+ const done=t=>{state.jota.push({r:'bot',t});state.jotaBusy=0;jSave();render();jScroll();if(voice||state.jSpeak)jSay(t)};
+ const api=lsg(JAPI),tok=lsg(JTOK);
+ if(api){try{const hist=state.jota.slice(-13,-1).map(m=>({role:m.r==='me'?'user':'assistant',content:m.t}));const last={role:'user',content:q,attachments:att.flatMap(a=>a.payload)};
+   const r=await fetch(api,{method:'POST',headers:Object.assign({'Content-Type':'application/json'},tok?{Authorization:'Bearer '+tok}:{}),body:JSON.stringify({messages:[...hist,last],lang:state.lang,mode,scope:opt.scope||'',countryName:co?(state.lang==='en'?co[2]:co[1]):'',currency:co?co[3]:''})});const j=await r.json();return done(j.reply||T('لم يصلني رد من الخادم','No reply from the server'))}catch(e){return done(T('تعذّر الاتصال بالخادم. تحقق من الرابط في الإعدادات.','Could not reach the server. Check the URL in settings.'))}}
+ setTimeout(()=>done((mode!=='chat'||att.length)?T('الأخبار والأسعار وحل الواجبات وتحليل الملفات تحتاج ربط الخادم. افتح الإعدادات ⚙️ وضع رابط الخادم.','News, rates, study help and file analysis need the server. Open settings ⚙️ and add your server URL.'):(jLocal(q)||T('لسه ما أقدر أجاوب على ده بدون ذكاء اصطناعي متصل. أقدر ألخّص رسائلك، أقترح ردوداً، أحسب، وأقول نكتة. ولو عايز إجابات حرة، اربطني بخادم من الإعدادات ⚙️','I can\'t answer that without a connected AI yet. I can summarize chats, suggest replies, calculate and tell jokes. For open answers, connect a server in settings ⚙️'))),state.fastJ?0:650)}
+function jScroll(){setTimeout(()=>{const e=$('#jmsgs');if(e)e.scrollTop=e.scrollHeight},30)}
+Object.assign(ACT,{
+ jnews(){state.jsub=state.jsub?0:1;render()},
+ jnl(){state.jsub=0;if(!jCountry()){toast(T('اختر بلدك من الإعدادات ⚙️','Pick your country in Settings ⚙️'));return ACT.jset()}jAsk(T('أهم أخبار اليوم في بلدي','Top news today in my country'),T('📍 شمارات محلية','📍 Local news'),0,{mode:'news',scope:'local'})},
+ jng(){state.jsub=0;jAsk(T('أهم الأخبار العالمية اليوم','Top world news today'),T('🌍 شمارات عالمية','🌍 World news'),0,{mode:'news',scope:'world'})},
+ jrate(){state.jsub=0;const co=jCountry();if(!co){toast(T('اختر بلدك من الإعدادات ⚙️','Pick your country in Settings ⚙️'));return ACT.jset()}jAsk(T(`سعر ${co[1]} مقابل الدولار اليوم`,`Price of ${co[2]} (${co[3]}) vs USD today`),T('💱 ما يغشوك..','💱 Rates..'),0,{mode:'rate'})},
+ jstudy(){state.jsub=0;if(state.jmode==='study')return ACT.jstudyx();state.jmode='study';if(!state.jota.length||state.jota[state.jota.length-1].r==='me'||true){state.jota.push({r:'bot',t:T('وضع غششني شغّال 📝 ورّيني السؤال أو صوّر الواجب أو ارفع الملف وأحله ليك خطوة بخطوة.','Study mode is on 📝 Show me the question, snap the homework or upload the file and I\'ll solve it step by step.')});jSave()}render();jScroll()},
+ jstudyx(){state.jmode='';render()},
+ jfree(){state.jsub=0;state.jmode='';state.jota=[{r:'bot',t:T('اتفضل، أنا معاك. في أي موضوع تحب نتكلم؟ 💬','Go ahead, I\'m with you. What do you want to talk about? 💬')}];state.jcur=null;state.jAtt=[];jSave();render();jScroll()},
+ jvopen(){state.jset=0;state.jvs=1;render()},jvclose(){state.jvs=0;render()},
+ jvtab(t){state.jvt=t.dataset.v;render()},
+ jvnat(){const P=jVP();if(!lsg(JAPI))return toast(T('اربط الخادم أولاً من الإعدادات','Connect the server in Settings first'));jVPset({nat:P.nat?0:1});render()},
+ jvpick(t){jVPset({ov:t.dataset.v,nat:1});render();ACT.jvprev(t)},
+ async jvprev(t){if(!lsg(JAPI))return toast(T('اربط الخادم أولاً من الإعدادات','Connect the server in Settings first'));const id=t.dataset.v,v=JOV.find(x=>x[0]===id);toast(T('جاري التشغيل...','Playing...'));const ok=await jSayNat(T(`أهلاً، أنا ${v[1]}. كيف أقدر أساعدك اليوم؟`,`Hi, I'm ${v[2]}. How can I help you today?`),id,id+state.lang);if(!ok)toast(T('تعذّر تشغيل الصوت. تحقق من الخادم ومفتاح OpenAI.','Could not play the voice. Check the server and OpenAI key.'))},
+ jmenu(){state.jdr=1;render()},jmenux(){state.jdr=0;render()},
+ jnew(){state.jota=[];state.jcur=null;state.jdr=0;state.jAtt=[];render()},
+ jopen(t){const c=state.jconvs.find(x=>x.id===t.dataset.id);if(!c)return;state.jcur=c.id;state.jota=c.msgs;state.jdr=0;render();jScroll()},
+ jdel(t){state.jconvs=state.jconvs.filter(x=>x.id!==t.dataset.id);if(state.jcur===t.dataset.id){state.jcur=null;state.jota=[]}jcSave();render()},
+ jvg(t){jVPset({g:t.dataset.v,name:''});render()},
+ jvname(el){jVPset({name:el.value});},
+ jvtest(){jSay(T('أهلاً، أنا جوطه. كيف أقدر أساعدك؟','Hello, I\'m Jota. How can I help you?'))},
+ jq(t){jAsk(t.dataset.q,t.dataset.l)},
+ jsend(){const i=$('#jIn');const v=i?i.value.trim():'';if(!v&&!state.jAtt.length)return;if(i)i.value='';jAsk(v||T('حلّل هذا','Analyze this'))},
+ jclr(){const c=state.jconvs.find(x=>x.id===state.jcur);if(c)state.jconvs=state.jconvs.filter(x=>x!==c);state.jcur=null;state.jota=[];state.jdr=0;jcSave();render()},
+ jset(){state.jset=1;state.jdr=0;render()},jsetx(){state.jset=0;render()},
+ jsave(){const v=($('#jApi')||{}).value||'',t=($('#jTok')||{}).value||'';try{localStorage.setItem(JAPI,v.trim());localStorage.setItem(JTOK,t.trim())}catch(e){}state.jset=0;toast(T('تم الحفظ','Saved'));render()},
+ async jtest(){const v=($('#jApi')||{}).value.trim(),t=($('#jTok')||{}).value.trim();if(!v)return toast(T('ضع الرابط أولاً','Enter the URL first'));toast(T('جاري الاختبار...','Testing...'));try{const r=await fetch(v,{method:'POST',headers:Object.assign({'Content-Type':'application/json'},t?{Authorization:'Bearer '+t}:{}),body:JSON.stringify({messages:[{role:'user',content:'Say OK'}]})});const j=await r.json();toast(r.ok?'✅ '+String(j.reply).slice(0,60):'⚠️ '+r.status+' '+String(j.reply||'').slice(0,50))}catch(e){toast(T('❌ لا يمكن الوصول للخادم','❌ Cannot reach the server'))}},
+ jattach(){pick('image/*,video/*,application/pdf,text/*,.txt,.md,.csv,.json,.py,.js,.html,.log',{multiple:true},async fs=>{for(const f of fs.slice(0,6))await jAddFile(f);render()})},
+ jatx(t){state.jAtt.splice(+t.dataset.i,1);render()},
+ jspk(){state.jSpeak=state.jSpeak?0:1;if(!state.jSpeak&&window.speechSynthesis)speechSynthesis.cancel();render()},
+ jmic(){if(JV.ptt){JV.ptt=0;jStopRec();return render()}if(JV.hands){toast(T('أوقف وضع 👂 أولاً','Turn off 👂 first'));return}if(jStartRec('ptt')){JV.ptt=1;render()}},
+ jhands(){if(JV.hands){JV.hands=0;jStopRec();if(window.speechSynthesis)speechSynthesis.cancel();return render()}if(jStartRec('hands')){JV.hands=1;JV.ptt=0;toast(T('قُل «جوطه» ثم سؤالك','Say "Jota" then your question'));render()}}});
+const _aJ=after;after=function(sc){_aJ(sc);if(sc==='jota'){jScroll();const i=$('#jIn');if(i)i.addEventListener('keydown',e=>{if(e.key==='Enter')ACT.jsend()})}else if(JV.hands||JV.ptt||JV.rec||jAudio){jStopAudio();JV.hands=0;JV.ptt=0;jStopRec();try{speechSynthesis.cancel()}catch(e){}}};
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&JV.hands){JV.hands=0;jStopRec();if(state.screen==='jota')render()}});
+
+try{speechSynthesis.onvoiceschanged=()=>{if(state.screen==='jota'&&state.jset)render()}}catch(e){}
 
 </script></body></html>
